@@ -1,0 +1,23 @@
+:root {
+	/*Primary Colors*/
+	--dark-cyan: hsl(158, 36%, 37%);
+	--cream: hsl(30, 38%, 92%);
+
+	/*Neutral Colors*/
+	--dark-blue: hsl(212, 21%, 14%);
+	--gray-blue: hsl(228, 12%, 48%);
+
+	/*Fallback Fonts*/
+	--fallback-serif: "Times New Roman", Times, serif;
+	--fallback-sans-serif: Arial, Helvatica, sans-serif;
+}
+
+* { 
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: Montserrat, var(--fallback-sans-serif);
+	font-size: 0.875em;
+}
