@@ -6,6 +6,7 @@
 	/*Neutral Colors*/
 	--dark-blue: hsl(212, 21%, 14%);
 	--gray-blue: hsl(228, 12%, 48%);
+	--white: hsl(0, 0%, 100%);
 
 	/*Fallback Fonts*/
 	--fallback-serif: "Times New Roman", Times, serif;
@@ -18,6 +19,65 @@
 }
 
 body {
+	background-color: var(--cream);
 	font-family: Montserrat, var(--fallback-sans-serif);
-	font-size: 0.875em;
+	font-weight: 500;
+	font-size: 0.875rem;
 }
+
+h1, h2, h3 {
+	font-family: Fraunces, var(--fallback-serif);
+	font-weight: 700;
+}
+
+.card-container {
+	display: flex;
+	flex-flow: row no-wrap;
+	background-color: var(--white);
+	border-radius: 1rem;
+	max-width: 50%;
+	margin: 0 auto;
+}
+
+.details-container {
+	max-width: 50%;
+	padding: 3rem;
+}
+
+.product-image {
+	width: auto;
+	height: inherit;
+	border-top-left-radius: inherit;
+	border-bottom-left-radius: inherit;
+}
+
+/* TEST CODE
+.card-container { 
+	display: flex;
+	background-color: var(--white);
+	position: relative;
+	top: 20rem;
+	width: 55rem;
+	height: 40rem;
+	margin: 0 auto;
+	border-radius: 1em;
+}
+
+.details-container {
+	width: inherit;
+	padding: 5rem;
+}
+
+.product-image {
+	height: inherit;
+	width: auto;
+	border-top-left-radius: inherit;
+	border-bottom-left-radius: inherit;
+}
+
+.add-cart-button { 
+	width: inherit;
+	background-color: var(--dark-cyan);
+	padding: 1rem;
+}
+*/
