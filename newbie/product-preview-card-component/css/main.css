@@ -22,7 +22,7 @@ body {
 	background-color: var(--cream);
 	font-family: Montserrat, var(--fallback-sans-serif);
 	font-weight: 500;
-	font-size: 0.875rem;
+	font-size: 0.875em;
 }
 
 h1, h2, h3 {
@@ -30,54 +30,56 @@ h1, h2, h3 {
 	font-weight: 700;
 }
 
-.card-container {
-	display: flex;
-	flex-flow: row no-wrap;
-	background-color: var(--white);
-	border-radius: 1rem;
-	max-width: 50%;
+p {
+	font-size: 0.875rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+.main-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	margin: 0 auto;
 }
 
-.details-container {
-	max-width: 50%;
-	padding: 3rem;
+.sub-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	background-color: var(--white);
+	height: 50rem;
+	border-radius: 0.8rem;
 }
 
 .product-image {
 	width: auto;
 	height: inherit;
 	border-top-left-radius: inherit;
-	border-bottom-left-radius: inherit;
-}
-
-/* TEST CODE
-.card-container { 
-	display: flex;
-	background-color: var(--white);
-	position: relative;
-	top: 20rem;
-	width: 55rem;
-	height: 40rem;
-	margin: 0 auto;
-	border-radius: 1em;
+	border-bottom-left-radius: inherit;	
 }
 
 .details-container {
-	width: inherit;
-	padding: 5rem;
+	margin: 3rem;
 }
 
-.product-image {
-	height: inherit;
-	width: auto;
-	border-top-left-radius: inherit;
-	border-bottom-left-radius: inherit;
-}
-
-.add-cart-button { 
-	width: inherit;
+.atc-button {
+	display: block;
 	background-color: var(--dark-cyan);
+	color: var(--white);
+	text-align: center;
+	border-radius: 0.6rem;
+	width: inherit;
 	padding: 1rem;
 }
-*/
+
+.atc-button::before {
+	background-image: url(../images/);
+}
+
+.attribution {
+	margin-top: 1rem;
+}
