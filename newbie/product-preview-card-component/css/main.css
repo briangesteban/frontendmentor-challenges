@@ -143,7 +143,10 @@ a.atc-button:link, a.atc-button:visited { background-color: var(--dark-cyan); }
 
 a.atc-button:hover, a.atc-button:active { background-color: var(--dark-cyan-h); }
 
-.attribution p { color: var(--dark-blue); }
+.attribution p { 
+	color: var(--dark-blue);
+	text-align: center;
+}
 
 div.attribution {
 	position: fixed;
