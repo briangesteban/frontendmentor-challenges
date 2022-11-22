@@ -13,18 +13,20 @@
   <title>Frontend Mentor | Product preview card component</title>
 </head>
 <body>
-  <div class="main-container"> 
-    <div class="sub-container">
-      <div class="image-holder">
-        <img class="product-image" alt="product image" src="images/image-product-desktop.jpg">
-      </div>
+  <div class="dialogue-container">
+    <div class="flex-dialogue">
+      <picture class="image-holder">
+        <source srcset="images/image-product-desktop.jpg" media="(min-width: 700px)" alt="product image">
+        <source srcset="images/image-product-mobile.jpg"  alt="product image">
+        <img srcs="images/image-product-mobile.jpg" alt="product image">
+      </picture>
       <div class="details-holder">
-        <p class="product-tag">PERFUME</p>
-        <h1 id="product-name"><span class="ln-break">Gabrielle</span> <span class="ln-break">Essence Eau</span> De Parfum</h1>
-        <p class="product-desc">A floral, solar and voluptuous interpretation composed <span class="ln-break">by</span> Olivier Polge, <span class="ln-break">Perfumer-Creator</span> for the House of CHANEL.</p>
-        <div class="price-holder">
-          <h2 class="disc-price">&#36;149.99</h2>
-          <p class="slash-price">&#36;169.99</p>
+        <p>PERFUME</p>
+        <h1>Gabrielle <span class="break">Essence</span> Eau <span class="break">De Parfum</span></h1>
+        <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+        <div class="flex-price">
+          <h2>&#36;149.99</h2>
+          <p>&#36;169.99</p>
         </div>
         <a class="atc-button" href="#">Add to Cart</a>
       </div>
@@ -33,9 +35,7 @@
   <div class="attribution">
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Icon from <a href="https://icons8.com" target="_blank">Icons8</a></p>
-    <p>
-      Coded by <a href="#">Brian Esteban</a>.
-    </p>
+    <p>Coded by <a href="#">Brian Esteban</a>.</p>
   </div>
 </body>
 </html>
