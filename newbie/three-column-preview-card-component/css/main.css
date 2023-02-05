@@ -1,0 +1,162 @@
+:root {
+    --clr-100: hsl(31, 77%, 52%);
+    --clr-200: hsl(184, 100%, 22%);
+    --clr-300: hsl(179, 100%, 13%);
+
+    --ntrl-100: hsla(0, 0%, 100%, 0.75);
+    --ntrl-200: hsl(0, 0%, 95%);
+
+    --ff-primary: "Lexend Deca", sans-serif;
+    --ff-secondary: "Big Shoulders Display", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--ntrl-200);
+    color: var(--ntrl-100);
+    font: 0.938rem var(--ff-primary);
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font: 2.2rem var(--ff-secondary);
+}
+
+p {
+    line-height: 1.8;
+}
+
+
+/* Repeating Classes */
+.flex {
+    display: flex;
+}
+
+.flow {
+    flex-flow: column wrap;
+}
+
+
+/* Main Content */
+main {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    border-radius: 0.6rem;
+    overflow: hidden;
+    width: 90vw;
+    margin: 3rem 0;
+}
+
+.content > div {
+    padding: 3rem;
+}
+
+.content > :nth-child(1) {
+    background-color: var(--clr-100);
+}
+
+.content > :nth-child(2) {
+    background-color: var(--clr-200);
+}
+
+.content > :nth-child(3) {
+    background-color: var(--clr-300);
+}
+
+.content > div {
+    flex-basis: 28rem;
+}
+
+.content > div > div {
+    flex-grow: 0.5;
+}
+
+.content > div > :nth-child(4){
+    margin-top: auto
+}
+
+.content > div h1 {
+    color: var(--ntrl-200);
+    text-transform: uppercase;
+}
+
+.content > div a:is(:link, :visited) {
+    display: block;
+    background-color: var(--ntrl-200);
+    border: 0.2rem solid var(--ntrl-200);
+    border-radius: 2.5rem;
+    text-align: center;
+    text-decoration: none;
+    width: 9rem;
+    padding: 0.8rem;
+}
+
+.content > div a:is(:hover, :active, :focus) {
+    background-color: transparent;
+    color: var(--ntrl-200) !important;
+}
+
+#cta-sedan {
+    color: var(--clr-100);
+}
+
+#cta-suv {
+    color: var(--clr-200);
+}
+
+#cta-luxury {
+    color: var(--clr-300);
+}
+
+
+/* Footer Content */
+footer {
+    background-color: var(--clr-300);
+    font-size: 0.688rem;
+    text-align: center;
+    padding: 0.3rem;
+}
+
+.attribution a:is(:link, :visited) {
+    color: var(--ntrl-200);
+}
+
+.attribution a:is(:hover, :active, :focus) {
+    color: var(--clr-100);
+}
+
+
+/* Bigger Displays */
+@media only screen and (min-width: 1024px) {
+    .content {
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+        height: 35rem;
+        margin: 5rem auto;
+    }
+
+    .content > div {
+        max-width: 21.09rem;
+    }
+
+    .content > div {
+        flex-basis: auto;
+    }
+    
+    .content > div > :nth-child(3){
+        flex-grow: 1;
+    }
+}
