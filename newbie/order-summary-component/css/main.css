@@ -168,6 +168,29 @@ main {
 	color: var(--clr-neutral-400);
 }
 
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-size: 0.75rem;
+	text-align: center;
+	width: 100%;
+	margin: 0.5rem 0;
+}
+
+p.attribution {
+	color: var(--clr-txt-accent);
+}
+
+.attribution a:is(:link, :visited) {
+	text-decoration: none;
+	color: var(--clr-link);
+}
+
+.attribution a:is(:hover, :active, :focus) {
+	color: var(--clr-link-h);
+}
 
 /* Bigger Displays */
 @media only screen and (min-width: 426px) {
@@ -184,5 +207,9 @@ main {
 @media only screen and (max-width: 345px) {
 	.plan {
 		overflow-x: scroll;
+	}
+
+	footer {
+		font-size: 0.625rem;
 	}
 }
