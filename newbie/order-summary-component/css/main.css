@@ -33,7 +33,7 @@
 
 body {
 	background: var(--clr-primary) url(../images/pattern-background-mobile.svg) repeat-x;
-	background-size: contain;
+	background-size: 100vw;
 	color: var(--clr-neutral-400);
 	font: 1rem var(--ff-primary);
 	font-weight: var(--fw-medium);
@@ -51,6 +51,7 @@ p {
 
 button {
 	font: inherit;
+	font-weight: var(--fw-bold);
 	cursor: pointer;
 }
 
@@ -82,8 +83,10 @@ button {
 main {
 	background-color: white;
 	border-radius: 1rem;
+	box-shadow: 0 15px 15px 5px var(--clr-neutral-shadow);
 	overflow: hidden;
 	width: 90%;
+	margin: 2rem 0;
 }
 
 .img-decor {
@@ -94,6 +97,10 @@ main {
 	align-items: center;
 	row-gap: 1.5rem;
 	padding: 2rem;
+}
+
+.details-title {
+	text-align: center;
 }
 
 .details-desc {
@@ -114,7 +121,7 @@ main {
 }
 
 .plan-name {
-
+	font-weight: var(--fw-bold);
 }
 
 .plan-price {
@@ -127,9 +134,15 @@ main {
 }
 
 .btn-change {
+	color: var(--clr-accent);
 	text-decoration: underline;
 	margin-left: auto;
 	padding: 0;
+}
+
+.btn-change:is(:hover, :active, :focus) {
+	color: var(--clr-accent-h);
+	text-decoration: none;
 }
 
 .btn-pay {
@@ -137,148 +150,39 @@ main {
 	color: var(--clr-neutral-100);
 	border: none;
 	border-radius: 1rem;
+	box-shadow: 0 10px 15px 5px var(--clr-accent-shadow);
 	width: 100%;
 	padding: 1rem;
 }
 
-/* .dialogue-container {
-	background-color: var(--clr-neutral-100);
-	width: 100%;
-	max-width: 85%;
-	border-radius: 1.5rem;
-	overflow: hidden;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	box-shadow: 0 0.5rem 1rem var(--clr-neutral-shadow);
-	z-index: 999;
-}
-
-.dialogue-container > :first-child {
-	width: 100%;
-}
-
-.flx-dialogue-details {
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
-	gap: 1.5rem;
-	padding: 1.5rem;
-}
-
-.flx-dialogue-details p {
-	color: var(--clr-neutral-300);
-	text-align: center;
-	line-height: 1.6rem;
-}
-
-.flx-plan-container {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 0.8rem;
-	background-color: var(--clr-neutral-200);
-	width: 100%;
-	padding: 1rem;
-	border-radius: 0.8rem;
-	overflow-x: auto;
-}
-
-.flx-plan-details {
-	display: flex;
-	flex-flow: column nowrap;
-}
-
-.ptp-button {
-	width: 100%;
-	background-color: var(--clr-accent);
-	color: var(--clr-neutral-100);
-	text-align: center;
-	font-weight: var(--fw-bold);
-	border-radius: 0.8rem;
-	padding: 1rem;
-	box-shadow: 0 1rem 0.8rem var(--clr-accent-shadow);
-}
-
-.ptp-button:is(:hover, :active, :focus) {
+.btn-pay:is(:hover, :active, :focus) {
 	background-color: var(--clr-accent-h);
 }
 
-.co-button {
-	background-color: transparent;
+.btn-cancel {
 	color: var(--clr-neutral-300);
-	text-align: center;
-	font-weight: var(--fw-bold);
-	padding: 0.5rem;
 }
 
-.co-button:is(:hover, :active, :focus) {
+
+.btn-cancel:is(:hover, :active, :focus) {
 	color: var(--clr-neutral-400);
 }
 
-footer {
-	width: 100%;
-	max-width: 100%;
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	transform: translate(-50%, 0);
-}
 
-footer p {
-	font-size: 0.687rem;
-	text-align: center;
-	margin: 0.5rem 0rem;
-}
-
-footer a:is(:link, :visited) {
-	color: var(--clr-link);
-}
-
-footer a:is(:hover, :active, :focus) {
-	color: var(--clr-link-h);
-}
-
-@media screen and (min-width: 1px) and (max-width: 280px) {
-	.flx-dialogue-details {
-		gap: 1rem;
-	}
-}
-
-@media screen and (min-width: 520px) and (max-width: 912px)  {
+/* Bigger Displays */
+@media only screen and (min-width: 426px) {
 	body {
 		background-image: url(../images/pattern-background-desktop.svg);
 	}
 
-	.dialogue-container {
-		max-width: 75%;
+	main {
+		max-width: 25rem;
 	}
 }
 
-@media screen and (min-width: 913px) and (max-width: 1440px) {
-	body {
-		background-image: url(../images/pattern-background-desktop.svg);
-	}
-
-	.flx-dialogue-details {
-		gap: 1rem;
-	}
-
-	.dialogue-container {
-		max-width: 35%;
-		max-height: 85%;
-		overflow-y: auto;
+/* Galaxy Fold and Narrower Displays */
+@media only screen and (max-width: 345px) {
+	.plan {
+		overflow-x: scroll;
 	}
 }
-
-@media screen and (min-width: 1441px) {
-	body {
-		background-image: url(../images/pattern-background-desktop.svg);
-	}
-
-	.dialogue-container {
-		max-width: 15%;
-	}
-} */
