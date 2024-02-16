@@ -1,0 +1,18 @@
+// Color Palette
+$clr-drk-blue: hsl(209, 23%, 22%);
+$clr-vdrk-100-blue: hsl(207, 26%, 17%);
+$clr-vdrk-200-blue: hsl(200, 15%, 8%);
+$clr-drk-gray: hsl(0, 0%, 52%);
+$clr-vlght-gray: hsl(0, 0%, 98%);
+$clr-white: hsl(0, 0%, 100%);
+
+// Light Mode
+$lght-mode-elements: $clr-white;
+$lght-mode-bg: $clr-vlght-gray;
+$lght-mode-txt: $clr-vdrk-200-blue;
+$lght-mode-input: $clr-drk-gray;
+
+// Dark Mode
+$drk-mode-elements: $clr-drk-blue;
+$drk-mode-bg: $clr-vdrk-100-blue;
+$drk-mode-txt: $clr-white;

@@ -1,0 +1,33 @@
+// Global Resets
+
+// Partial imports
+@use "./fonts" as *;
+@use "./colors" as *;
+@use "./fn-mixins" as *;
+
+// Reset size calculation
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Removes default margin and padding
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// Change default fonts and colors
+body {
+  font-family: $ff-primary-stack;
+  color: $lght-mode-txt;
+  background-color: $lght-mode-elements;
+}
+
+// Change display and set minimum height
+#root {
+  @include dp-flex-block(column, nowrap);
+  @include flex-center(center, center);
+  min-height: 100vh;
+}
