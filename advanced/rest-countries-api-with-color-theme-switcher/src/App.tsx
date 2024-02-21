@@ -1,11 +1,15 @@
+import { useState } from "react";
+import { Header } from "./components/Header/Header";
 import "./App.scss";
 
-function App() {
+const App = () => {
+  const [lightMode, setLightMode] = useState(false); // Lighting Mode State
+
   return (
     <>
-      <h1>test</h1>
+      <Header lightMode={lightMode} setLightMode={setLightMode} />
     </>
   );
-}
+};
 
 export default App;

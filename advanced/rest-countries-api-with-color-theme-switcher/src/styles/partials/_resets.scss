@@ -1,9 +1,14 @@
-// Global Resets
+//////// Global Resets ////////
 
 // Partial imports
 @use "./fonts" as *;
 @use "./colors" as *;
 @use "./fn-mixins" as *;
+
+// Change default root font size (easier computation)
+:root {
+  font-size: 10px;
+}
 
 // Reset size calculation
 *,
@@ -30,4 +35,5 @@ body {
   @include dp-flex-block(column, nowrap);
   @include flex-center(center, center);
   min-height: 100vh;
+  width: 100%;
 }

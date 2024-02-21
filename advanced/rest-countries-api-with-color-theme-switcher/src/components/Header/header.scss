@@ -1,0 +1,25 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fn-mixins" as *;
+
+.header {
+    @include dp-flex-block(row, wrap);
+    @include flex-center(null, center);
+    box-shadow: 0 0.5rem 0.8rem #00000010;
+    width: 100%;
+    padding: 3rem 2rem;
+    margin-bottom: auto;
+
+    &__title {
+        margin-right: auto;
+    }
+
+    &__btn-mode {
+        background: transparent;
+        border: none;
+        padding: 1rem;
+
+        &:is(:hover, :focus-visible){
+            background-color: $lght-mode-bg;
+        }
+    }
+}
