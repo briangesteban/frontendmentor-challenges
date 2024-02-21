@@ -4,10 +4,10 @@
 .header {
     @include dp-flex-block(row, wrap);
     @include flex-center(null, center);
-    box-shadow: 0 0.5rem 0.8rem #00000010;
+    align-self: flex-start;
+    box-shadow: $shadow-bottom;
     width: 100%;
     padding: 3rem 2rem;
-    margin-bottom: auto;
 
     &__title {
         margin-right: auto;

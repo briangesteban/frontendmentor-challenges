@@ -1,4 +1,4 @@
-//////// Color Variables ////////
+//////// Colors and Shadow Variables ////////
 
 // Color Palette
 $clr-drk-blue: hsl(209, 23%, 22%);
@@ -7,6 +7,10 @@ $clr-vdrk-200-blue: hsl(200, 15%, 8%);
 $clr-drk-gray: hsl(0, 0%, 52%);
 $clr-vlght-gray: hsl(0, 0%, 98%);
 $clr-white: hsl(0, 0%, 100%);
+
+// Shadow
+$shadow-bottom: 0 0.5rem 0.8rem #00000010;
+$shadow-spread: 0 0 0.8rem 0.5rem #00000010;
 
 // Light Mode
 $lght-mode-elements: $clr-white;

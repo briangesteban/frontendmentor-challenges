@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Header } from "./components/Header/Header";
+import { SearchBar } from "./components/SearchBar/SearchBar";
 import "./App.scss";
 
 const App = () => {
@@ -8,6 +9,9 @@ const App = () => {
   return (
     <>
       <Header lightMode={lightMode} setLightMode={setLightMode} />
+      <main>
+        <SearchBar />
+      </main>
     </>
   );
 };
