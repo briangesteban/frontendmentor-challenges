@@ -1,0 +1,15 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fn-mixins" as *;
+
+.filter {
+  padding: 2rem;
+
+  &__dropdown {
+    background-color: $lght-mode-elements;
+    box-shadow: $shadow-spread;
+    border: none;
+    border-radius: 0.5rem;
+    width: 60%;
+    padding: 2rem;
+  }
+}
