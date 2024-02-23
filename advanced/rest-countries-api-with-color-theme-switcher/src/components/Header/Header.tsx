@@ -7,13 +7,23 @@ interface IMode {
 
 const Header = ({ lightMode, setLightMode }: IMode) => {
   return (
-    <header className="header">
-      <h1 className="header__title">Where in the world?</h1>
+    <header className={!lightMode ? "header" : "header header--drk-mode"}>
+      <h1
+        className={
+          !lightMode ? "header__title" : "header__title header__title--drk-mode"
+        }
+      >
+        Where in the world?
+      </h1>
       <button
         onClick={() => {
           lightMode === false ? setLightMode(true) : setLightMode(false);
         }}
-        className="header__btn-mode"
+        className={
+          !lightMode
+            ? "header__btn-mode"
+            : "header__btn-mode header__btn-mode--drk-mode"
+        }
         type="button"
       >
         {lightMode === false ? "Dark Mode" : "Light Mode"}

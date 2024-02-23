@@ -8,6 +8,7 @@
 }
 
 .card {
+  color: $lght-mode-txt;
   background-color: $lght-mode-elements;
   box-shadow: $shadow-spread;
   overflow: hidden;
@@ -15,12 +16,18 @@
   width: 26rem;
   margin: 2rem;
 
+  &--drk-mode {
+    color: $drk-mode-txt;
+    background-color: $drk-mode-elements;
+  }
+
   &__flag {
+    display: block;
     width: inherit;
   }
 
   &__details {
-    padding: 2rem;
+    padding: 3rem 2rem;
   }
 
   // &__title {

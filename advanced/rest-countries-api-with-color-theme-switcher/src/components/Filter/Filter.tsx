@@ -1,9 +1,20 @@
 import "./filter.scss";
 
-const Filter = () => {
+interface IMode {
+  lightMode: boolean;
+}
+
+const Filter = ({ lightMode }: IMode) => {
   return (
     <section className="filter">
-      <select className="filter__dropdown" name="regions">
+      <select
+        className={
+          !lightMode
+            ? "filter__dropdown"
+            : "filter__dropdown filter__dropdown--drk-mode"
+        }
+        name="regions"
+      >
         <option value="" selected disabled hidden>
           Filter by Region
         </option>

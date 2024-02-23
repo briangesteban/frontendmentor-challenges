@@ -1,10 +1,18 @@
 import "./search-bar.scss";
 
-const SearchBar = () => {
+interface IMode {
+  lightMode: boolean;
+}
+
+const SearchBar = ({ lightMode }: IMode) => {
   return (
     <section className="search-bar">
       <input
-        className="search-bar__field"
+        className={
+          !lightMode
+            ? "search-bar__field"
+            : "search-bar__field search-bar__field--drk-mode"
+        }
         type="search"
         placeholder="Search for a country..."
       />

@@ -1,11 +1,18 @@
 import countriesData from "../../data/countries.json";
 import "./country-card.scss";
 
-const CountryCard = () => {
+interface IMode {
+  lightMode: boolean;
+}
+
+const CountryCard = ({ lightMode }: IMode) => {
   // Maps the Countries Data
   const countriesList = countriesData.map((countryData) => {
     return (
-      <article className="card" key={countryData.name}>
+      <article
+        className={!lightMode ? "card" : "card card--drk-mode"}
+        key={countryData.name}
+      >
         <img
           className="card__flag"
           src={!countryData.flags ? countryData.flag : countryData.flags.svg}

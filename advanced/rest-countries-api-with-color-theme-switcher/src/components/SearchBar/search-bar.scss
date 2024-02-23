@@ -1,14 +1,21 @@
 @use "../../styles/partials/colors" as *;
 
 .search-bar {
+  padding: 2rem;
+
+  &__field {
+    background-color: $lght-mode-elements;
+    box-shadow: $shadow-spread;
+    border: none;
+    border-radius: 0.5rem;
+    width: 100%;
     padding: 2rem;
 
-    &__field {
-        background-color: $lght-mode-elements;
-        box-shadow: $shadow-spread;
-        border: none;
-        border-radius: 0.5rem;
-        width: 100%;
-        padding: 2rem;
+    &--drk-mode {
+      background-color: $drk-mode-elements;
+      &::placeholder {
+        color: $drk-mode-txt;
+      }
     }
+  }
 }

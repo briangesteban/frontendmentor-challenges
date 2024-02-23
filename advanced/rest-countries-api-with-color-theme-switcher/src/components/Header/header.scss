@@ -9,17 +9,24 @@
   width: 100%;
   padding: 3rem 2rem;
 
+  &--drk-mode {
+    background-color: $drk-mode-elements;
+  }
+
   &__title {
     margin-right: auto;
+
+    &--drk-mode {
+      color: $drk-mode-txt;
+    }
   }
 
   &__btn-mode {
-    background: transparent;
+    background-color: transparent;
     border: none;
-    padding: 1rem;
 
-    &:is(:hover, :focus-visible) {
-      background-color: $lght-mode-bg;
+    &--drk-mode {
+      color: $drk-mode-txt;
     }
   }
 }
