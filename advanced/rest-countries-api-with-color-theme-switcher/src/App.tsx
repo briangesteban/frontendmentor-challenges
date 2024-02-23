@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Header } from "./components/Header/Header";
 import { SearchBar } from "./components/SearchBar/SearchBar";
 import { Filter } from "./components/Filter/Filter";
+import { CountryCard } from "./components/CountryCard/CountryCard";
 import "./App.scss";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <main>
         <SearchBar />
         <Filter />
+        <CountryCard />
       </main>
     </>
   );

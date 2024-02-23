@@ -1,0 +1,41 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/fn-mixins" as *;
+
+.card-wrapper {
+  @include dp-flex-block(column, wrap);
+  @include flex-center(null, center);
+  width: 100%;
+}
+
+.card {
+  background-color: $lght-mode-elements;
+  box-shadow: $shadow-spread;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  width: 26rem;
+  margin: 2rem;
+
+  &__flag {
+    width: inherit;
+  }
+
+  &__details {
+    padding: 2rem;
+  }
+
+  // &__title {
+  // }
+
+  &__info {
+    // &-wrapper {
+    // }
+
+    &-title {
+      display: inline;
+    }
+
+    &-context {
+      @extend .card__info-title;
+    }
+  }
+}

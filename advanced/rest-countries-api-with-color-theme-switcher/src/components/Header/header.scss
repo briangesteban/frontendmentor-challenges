@@ -2,24 +2,24 @@
 @use "../../styles/partials/fn-mixins" as *;
 
 .header {
-    @include dp-flex-block(row, wrap);
-    @include flex-center(null, center);
-    align-self: flex-start;
-    box-shadow: $shadow-bottom;
-    width: 100%;
-    padding: 3rem 2rem;
+  @include dp-flex-block(row, wrap);
+  @include flex-center(null, center);
+  background-color: $lght-mode-elements;
+  box-shadow: $shadow-bottom;
+  width: 100%;
+  padding: 3rem 2rem;
 
-    &__title {
-        margin-right: auto;
+  &__title {
+    margin-right: auto;
+  }
+
+  &__btn-mode {
+    background: transparent;
+    border: none;
+    padding: 1rem;
+
+    &:is(:hover, :focus-visible) {
+      background-color: $lght-mode-bg;
     }
-
-    &__btn-mode {
-        background: transparent;
-        border: none;
-        padding: 1rem;
-
-        &:is(:hover, :focus-visible){
-            background-color: $lght-mode-bg;
-        }
-    }
+  }
 }
