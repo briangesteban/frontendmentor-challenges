@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 import { Header } from "./components/Header/Header";
-import { Home } from "./pages/Home";
+import { HomePage } from "./pages/HomePage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 import "./App.scss";
 
 const App = () => {
@@ -18,9 +19,9 @@ const App = () => {
       <Header lightMode={lightMode} setLightMode={setLightMode} />
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
-        <Route path="/home" element={<Home lightMode={lightMode} />} />
-        <Route path="/:country" element={null} />
-        <Route path="*" element={null} /> {/* Not Found Page */}
+        <Route path="/home" element={<HomePage lightMode={lightMode} />} />
+        <Route path="/country/:country" element={null} />
+        <Route path="*" element={<NotFoundPage lightMode={lightMode} />} />
       </Routes>
     </BrowserRouter>
   );

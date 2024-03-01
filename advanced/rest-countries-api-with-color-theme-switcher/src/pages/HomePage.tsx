@@ -5,7 +5,7 @@ interface IMode {
   lightMode: boolean;
 }
 
-const Home = ({ lightMode }: IMode) => {
+const HomePage = ({ lightMode }: IMode) => {
   return (
     <main>
       <FilterSection lightMode={lightMode} />
@@ -14,4 +14,4 @@ const Home = ({ lightMode }: IMode) => {
   );
 };
 
-export { Home };
+export { HomePage };
