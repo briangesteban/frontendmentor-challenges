@@ -1,0 +1,18 @@
+////////  Screen Breakpoints ////////
+
+// Breakpoint Variables
+$mobile-breakpoint: 375px;
+$desktop-breakpoint: 1440px;
+
+// Media Queries
+@mixin mobile {
+  @media (min-width: $mobile-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}

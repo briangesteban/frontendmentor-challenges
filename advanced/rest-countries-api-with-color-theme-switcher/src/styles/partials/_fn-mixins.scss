@@ -8,7 +8,7 @@
 }
 
 // Display Inline Flex
-@mixin dp-flex-block($dir, $wrap) {
+@mixin dp-flex-inline($dir, $wrap) {
   display: inline-flex;
   flex-direction: $dir;
   flex-wrap: $wrap;

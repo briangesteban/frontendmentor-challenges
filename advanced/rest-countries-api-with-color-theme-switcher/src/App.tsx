@@ -1,8 +1,5 @@
 import { useState } from "react";
-import { Header } from "./components/Header/Header";
-import { SearchBar } from "./components/SearchBar/SearchBar";
-import { Filter } from "./components/Filter/Filter";
-import { CountryCard } from "./components/CountryCard/CountryCard";
+import { Home } from "./pages/Home";
 import "./App.scss";
 
 const App = () => {
@@ -14,16 +11,7 @@ const App = () => {
     ? bodyEl.removeAttribute("class")
     : bodyEl.classList.add("body--drk-mode");
 
-  return (
-    <>
-      <Header lightMode={lightMode} setLightMode={setLightMode} />
-      <main>
-        <SearchBar lightMode={lightMode} />
-        <Filter lightMode={lightMode} />
-        <CountryCard lightMode={lightMode} />
-      </main>
-    </>
-  );
+  return <Home lightMode={lightMode} setLightMode={setLightMode} />;
 };
 
 export default App;

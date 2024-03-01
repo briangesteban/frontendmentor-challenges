@@ -1,0 +1,54 @@
+@use "../../styles/partials/media-queries" as *;
+@use "../../styles/partials/fn-mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+// Search Bar Styling
+.search-bar {
+  padding: 2rem;
+
+  &__field {
+    background-color: $lght-mode-elements;
+    box-shadow: $shadow-spread;
+    border: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    padding: 2rem;
+
+    @include desktop() {
+      width: 40rem;
+    }
+
+    &--drk-mode {
+      background-color: $drk-mode-elements;
+      &::placeholder {
+        color: $drk-mode-txt;
+      }
+    }
+  }
+}
+
+// Filter Region Styling
+.filter-region {
+  padding: 2rem;
+  @include desktop() {
+    margin-left: auto;
+  }
+
+  &__dropdown {
+    background-color: $lght-mode-elements;
+    box-shadow: $shadow-spread;
+    border: none;
+    border-radius: 0.5rem;
+    width: 18rem;
+    padding: 2rem;
+
+    @include desktop() {
+      width: 20rem;
+    }
+
+    &--drk-mode {
+      color: $drk-mode-txt;
+      background-color: $drk-mode-elements;
+    }
+  }
+}

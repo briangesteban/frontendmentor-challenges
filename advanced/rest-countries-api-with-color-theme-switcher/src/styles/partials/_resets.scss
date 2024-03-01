@@ -23,6 +23,12 @@
   padding: 0;
 }
 
+// Change default cursor for links and buttons
+a,
+button {
+  cursor: pointer;
+}
+
 // Change default fonts and colors
 body {
   font-family: $ff-primary-stack;
