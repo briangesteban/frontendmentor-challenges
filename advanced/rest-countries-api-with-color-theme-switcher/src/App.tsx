@@ -1,4 +1,6 @@
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
+import { Header } from "./components/Header/Header";
 import { Home } from "./pages/Home";
 import "./App.scss";
 
@@ -11,7 +13,17 @@ const App = () => {
     ? bodyEl.removeAttribute("class")
     : bodyEl.classList.add("body--drk-mode");
 
-  return <Home lightMode={lightMode} setLightMode={setLightMode} />;
+  return (
+    <BrowserRouter>
+      <Header lightMode={lightMode} setLightMode={setLightMode} />
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<Home lightMode={lightMode} />} />
+        <Route path="/:country" element={null} />
+        <Route path="*" element={null} /> {/* Not Found Page */}
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;
