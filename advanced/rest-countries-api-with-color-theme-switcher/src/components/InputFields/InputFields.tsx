@@ -1,4 +1,4 @@
-import "./input-fields.scss";
+import "./InputFields.scss";
 
 interface IMode {
   lightMode: boolean;

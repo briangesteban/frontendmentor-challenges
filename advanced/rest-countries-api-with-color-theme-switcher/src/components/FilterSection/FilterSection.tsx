@@ -1,5 +1,5 @@
 import { SearchBar, FilterRegion } from "../InputFields/InputFields";
-import "./filter-section.scss";
+import "./FilterSection.scss";
 
 interface IMode {
   lightMode: boolean;

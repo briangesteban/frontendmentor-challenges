@@ -1,4 +1,4 @@
-import "./header.scss";
+import "./Header.scss";
 
 interface IMode {
   lightMode: boolean;
