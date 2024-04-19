@@ -1,0 +1,15 @@
+//////// Font & Typography ////////
+
+// Import Google Font - Nunito Sans (Varient Styles & Weights)
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+// Font Stack
+$ff-primary-stack: "Inter", sans-serif;
+
+// Root Font Size
+$fs-root: 14px;
+
+// Font Weights
+$fw-regular: 400;
+$fw-medium: 600;
+$fw-bold: 700;
