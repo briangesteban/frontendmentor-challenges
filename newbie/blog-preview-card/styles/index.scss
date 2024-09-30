@@ -55,6 +55,16 @@
     margin-bottom: 0.75rem;
   }
 
+  &__link {
+    color: $clr-neut-drk;
+    text-decoration: none;
+    transition: color 500ms;
+
+    &:is(:hover, :active, :focus-visible) {
+      color: $clr-primary;
+    }
+  }
+
   &__title {
     @include type-header;
     margin-bottom: 0.75rem;
@@ -120,7 +130,7 @@
         transition: 500ms;
       }
 
-      &:is(:hover, :active) {
+      &:is(:hover, :active, :focus-visible) {
         &::after {
           width: 100%;
         }

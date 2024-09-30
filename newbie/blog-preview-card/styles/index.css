@@ -102,6 +102,14 @@ body {
     font-size: 0.875rem;
   }
 }
+.blog-card__link {
+  color: hsl(0, 0%, 7%);
+  text-decoration: none;
+  transition: color 500ms;
+}
+.blog-card__link:is(:hover, :active, :focus-visible) {
+  color: hsl(47, 88%, 63%);
+}
 .blog-card__title {
   font-family: "Figtree Extra Bold", sans-serif;
   font-size: 1.25rem;
@@ -201,6 +209,6 @@ body {
   bottom: 0;
   transition: 500ms;
 }
-.footer__attribution-link:is(:hover, :active)::after {
+.footer__attribution-link:is(:hover, :active, :focus-visible)::after {
   width: 100%;
 }
