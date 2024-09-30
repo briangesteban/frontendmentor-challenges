@@ -17,20 +17,24 @@
   </head>
   <body>
     <main class="content">
-      <h1 class="content__header">Blog Preview Card</h1>
+      <h1 class="content__header content__header--sr-only">
+        Blog Preview Card
+      </h1>
       <article class="blog-card">
         <img
           src="./assets/images/illustration-article.svg"
           alt=""
           class="blog-card__thumbnail"
         />
-        <p class="blog-card__label"><strong>Learning</strong></p>
-        <p class="blog-card__pub-date">Published 21 Dec 2023</p>
-        <h2 class="blog-card__title">HTML & CSS foundations</h2>
-        <p class="blog-card__details">
-          These languages are the backbone of every website, defining structure,
-          content, and presentation.
-        </p>
+        <div class="blog-card__content">
+          <p class="blog-card__label"><strong>Learning</strong></p>
+          <p class="blog-card__pub-date">Published 21 Dec 2023</p>
+          <h2 class="blog-card__title">HTML & CSS foundations</h2>
+          <p class="blog-card__details">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+        </div>
         <div class="blog-card__author">
           <img
             src="./assets/images/image-avatar.webp"
@@ -44,9 +48,15 @@
     <footer class="footer">
       <p class="footer__attribution">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          class="footer__attribution-link"
           >Frontend Mentor</a
-        >. Coded by <a href="#BrianEsteban">Brian Esteban</a>.
+        >. Coded by
+        <a href="#BrianEsteban" class="footer__attribution-link"
+          >Brian Esteban</a
+        >.
       </p>
     </footer>
   </body>
