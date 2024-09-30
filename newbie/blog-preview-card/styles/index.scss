@@ -1,5 +1,6 @@
 @use "./partials/resets";
 @use "./partials/colors" as *;
+@use "./partials/typography" as *;
 
 .content {
   flex-grow: 1;
@@ -23,7 +24,7 @@
 
 .blog-card {
   background-color: $clr-neut-lgt;
-  border: solid 1 $clr-neut-drk;
+  border: solid 1px $clr-neut-drk;
   border-radius: 1.25rem;
   padding: 1.5rem;
   width: 20.4375rem;
@@ -39,6 +40,7 @@
   }
 
   &__label {
+    @include type-footer-bold;
     display: inline-block;
     background-color: $clr-primary;
     border-radius: 0.25rem;
@@ -47,14 +49,17 @@
   }
 
   &__pub-date {
+    @include type-footer;
     margin-bottom: 0.75rem;
   }
 
   &__title {
+    @include type-header;
     margin-bottom: 0.75rem;
   }
 
   &__details {
+    @include type-body-copy;
     color: $clr-neut-mid;
   }
 
@@ -72,6 +77,7 @@
   }
 
   &__name {
+    @include type-footer-bold;
     margin-left: 0.75rem;
   }
 }
@@ -83,12 +89,14 @@
   padding: 0.5rem;
 
   &__attribution {
+    @include type-footer;
     color: $clr-neut-lgt;
     text-align: center;
     max-width: 15rem;
     line-height: 1.5rem;
 
     &-link {
+      @include type-footer-bold;
       color: $clr-primary;
       text-decoration: none;
       position: relative;

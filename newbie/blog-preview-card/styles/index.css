@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Figtree Extra Bold";
+  src: url("../assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype"), url("../assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Figtree Medium";
+  src: url("../assets/fonts/static/Figtree-SemiBold.ttf") format("truetype");
+}
 *,
 *::before,
 *::after {
@@ -17,6 +25,10 @@ a {
 }
 
 body {
+  font-family: "Figtree Medium", sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
   display: flex;
   flex-flow: column nowrap;
   background-color: hsl(47, 88%, 63%);
@@ -43,7 +55,7 @@ body {
 
 .blog-card {
   background-color: hsl(0, 0%, 100%);
-  border: solid 1 hsl(0, 0%, 7%);
+  border: solid 1px hsl(0, 0%, 7%);
   border-radius: 1.25rem;
   padding: 1.5rem;
   width: 20.4375rem;
@@ -57,6 +69,10 @@ body {
   margin: 1.25rem 0;
 }
 .blog-card__label {
+  font-family: "Figtree Extra Bold", sans-serif;
+  font-size: 0.875rem;
+  line-height: 150%;
+  letter-spacing: 0px;
   display: inline-block;
   background-color: hsl(47, 88%, 63%);
   border-radius: 0.25rem;
@@ -64,12 +80,24 @@ body {
   margin-bottom: 0.75rem;
 }
 .blog-card__pub-date {
+  font-family: "Figtree Medium", sans-serif;
+  font-size: 0.875em;
+  line-height: 150%;
+  letter-spacing: 0px;
   margin-bottom: 0.75rem;
 }
 .blog-card__title {
+  font-family: "Figtree Extra Bold", sans-serif;
+  font-size: 1.5rem;
+  line-height: 150%;
+  letter-spacing: 0px;
   margin-bottom: 0.75rem;
 }
 .blog-card__details {
+  font-family: "Figtree Medium", sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0px;
   color: hsl(0, 0%, 42%);
 }
 .blog-card__author {
@@ -83,6 +111,10 @@ body {
   aspect-ratio: 1/1;
 }
 .author__name {
+  font-family: "Figtree Extra Bold", sans-serif;
+  font-size: 0.875rem;
+  line-height: 150%;
+  letter-spacing: 0px;
   margin-left: 0.75rem;
 }
 
@@ -93,12 +125,20 @@ body {
   padding: 0.5rem;
 }
 .footer__attribution {
+  font-family: "Figtree Medium", sans-serif;
+  font-size: 0.875em;
+  line-height: 150%;
+  letter-spacing: 0px;
   color: hsl(0, 0%, 100%);
   text-align: center;
   max-width: 15rem;
   line-height: 1.5rem;
 }
 .footer__attribution-link {
+  font-family: "Figtree Extra Bold", sans-serif;
+  font-size: 0.875rem;
+  line-height: 150%;
+  letter-spacing: 0px;
   color: hsl(47, 88%, 63%);
   text-decoration: none;
   position: relative;
