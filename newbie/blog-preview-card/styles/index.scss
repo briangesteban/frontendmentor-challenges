@@ -1,6 +1,7 @@
 @use "./partials/resets";
 @use "./partials/colors" as *;
 @use "./partials/typography" as *;
+@use "./partials/medias" as *;
 
 .content {
   flex-grow: 1;
@@ -27,8 +28,9 @@
   border: solid 1px $clr-neut-drk;
   border-radius: 1.25rem;
   padding: 1.5rem;
-  width: 20.4375rem;
+  margin-inline: 1.5rem;
   box-shadow: 0.5rem 0.5rem $clr-neut-drk;
+  max-width: 24rem;
 
   &__thumbnail {
     border-radius: 0.625rem;
@@ -78,6 +80,7 @@
 
   &__name {
     @include type-footer-bold;
+    font-size: 0.875rem;
     margin-left: 0.75rem;
   }
 }
@@ -92,8 +95,12 @@
     @include type-footer;
     color: $clr-neut-lgt;
     text-align: center;
-    max-width: 15rem;
+    width: 12rem;
     line-height: 1.5rem;
+
+    @include desktop {
+      width: 15rem;
+    }
 
     &-link {
       @include type-footer-bold;

@@ -26,7 +26,7 @@ a {
 
 body {
   font-family: "Figtree Medium", sans-serif;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 150%;
   letter-spacing: 0px;
   display: flex;
@@ -34,6 +34,11 @@ body {
   background-color: hsl(47, 88%, 63%);
   color: hsl(0, 0%, 7%);
   min-height: 100vh;
+}
+@media only screen and (min-width: 1440px) {
+  body {
+    font-size: 1rem;
+  }
 }
 
 .content {
@@ -58,8 +63,9 @@ body {
   border: solid 1px hsl(0, 0%, 7%);
   border-radius: 1.25rem;
   padding: 1.5rem;
-  width: 20.4375rem;
+  margin-inline: 1.5rem;
   box-shadow: 0.5rem 0.5rem hsl(0, 0%, 7%);
+  max-width: 24rem;
 }
 .blog-card__thumbnail {
   border-radius: 0.625rem;
@@ -70,7 +76,7 @@ body {
 }
 .blog-card__label {
   font-family: "Figtree Extra Bold", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 150%;
   letter-spacing: 0px;
   display: inline-block;
@@ -79,26 +85,46 @@ body {
   padding: 0.25rem 0.75rem;
   margin-bottom: 0.75rem;
 }
+@media only screen and (min-width: 1440px) {
+  .blog-card__label {
+    font-size: 0.875rem;
+  }
+}
 .blog-card__pub-date {
   font-family: "Figtree Medium", sans-serif;
-  font-size: 0.875em;
+  font-size: 0.75rem;
   line-height: 150%;
   letter-spacing: 0px;
   margin-bottom: 0.75rem;
+}
+@media only screen and (min-width: 1440px) {
+  .blog-card__pub-date {
+    font-size: 0.875rem;
+  }
 }
 .blog-card__title {
   font-family: "Figtree Extra Bold", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 150%;
   letter-spacing: 0px;
   margin-bottom: 0.75rem;
 }
+@media only screen and (min-width: 1440px) {
+  .blog-card__title {
+    font-size: 1.5rem;
+  }
+}
 .blog-card__details {
   font-family: "Figtree Medium", sans-serif;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 150%;
   letter-spacing: 0px;
   color: hsl(0, 0%, 42%);
+}
+@media only screen and (min-width: 1440px) {
+  .blog-card__details {
+    font-size: 1rem;
+  }
 }
 .blog-card__author {
   display: flex;
@@ -112,10 +138,16 @@ body {
 }
 .author__name {
   font-family: "Figtree Extra Bold", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 150%;
   letter-spacing: 0px;
+  font-size: 0.875rem;
   margin-left: 0.75rem;
+}
+@media only screen and (min-width: 1440px) {
+  .author__name {
+    font-size: 0.875rem;
+  }
 }
 
 .footer {
@@ -126,22 +158,37 @@ body {
 }
 .footer__attribution {
   font-family: "Figtree Medium", sans-serif;
-  font-size: 0.875em;
+  font-size: 0.75rem;
   line-height: 150%;
   letter-spacing: 0px;
   color: hsl(0, 0%, 100%);
   text-align: center;
-  max-width: 15rem;
+  width: 12rem;
   line-height: 1.5rem;
+}
+@media only screen and (min-width: 1440px) {
+  .footer__attribution {
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .footer__attribution {
+    width: 15rem;
+  }
 }
 .footer__attribution-link {
   font-family: "Figtree Extra Bold", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 150%;
   letter-spacing: 0px;
   color: hsl(47, 88%, 63%);
   text-decoration: none;
   position: relative;
+}
+@media only screen and (min-width: 1440px) {
+  .footer__attribution-link {
+    font-size: 0.875rem;
+  }
 }
 .footer__attribution-link::after {
   content: "";

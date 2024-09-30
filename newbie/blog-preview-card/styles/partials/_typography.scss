@@ -1,3 +1,5 @@
+@use "./medias" as *;
+
 @font-face {
   font-family: "Figtree Extra Bold";
   src: url("../assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype"),
@@ -11,7 +13,7 @@
 
 // Header Text Presets
 $ff-header: "Figtree Extra Bold", sans-serif;
-$fs-header: 1.5rem;
+$fs-header: 1.25rem;
 $lh-header: 150%;
 $ls-header: 0px;
 
@@ -20,11 +22,15 @@ $ls-header: 0px;
   font-size: $fs-header;
   line-height: $lh-header;
   letter-spacing: $ls-header;
+
+  @include desktop {
+    font-size: 1.5rem;
+  }
 }
 
 // Body Copy Text Presets
 $ff-body-copy: "Figtree Medium", sans-serif;
-$fs-body-copy: 1rem;
+$fs-body-copy: 0.875rem;
 $lh-body-copy: 150%;
 $ls-body-copy: 0px;
 
@@ -33,11 +39,15 @@ $ls-body-copy: 0px;
   font-size: $fs-body-copy;
   line-height: $lh-body-copy;
   letter-spacing: $ls-body-copy;
+
+  @include desktop {
+    font-size: 1rem;
+  }
 }
 
 // Footer Text Presets
 $ff-footer: "Figtree Medium", sans-serif;
-$fs-footer: 0.875em;
+$fs-footer: 0.75rem;
 $lh-footer: 150%;
 $ls-footer: 0px;
 
@@ -46,11 +56,15 @@ $ls-footer: 0px;
   font-size: $fs-footer;
   line-height: $lh-footer;
   letter-spacing: $ls-footer;
+
+  @include desktop {
+    font-size: 0.875rem;
+  }
 }
 
 // Footer Bold Text Presets
 $ff-footer-bold: "Figtree Extra Bold", sans-serif;
-$fs-footer-bold: 0.875rem;
+$fs-footer-bold: 0.75rem;
 $lh-footer-bold: 150%;
 $ls-footer-bold: 0px;
 
@@ -59,4 +73,8 @@ $ls-footer-bold: 0px;
   font-size: $fs-footer-bold;
   line-height: $lh-footer-bold;
   letter-spacing: $ls-footer-bold;
+
+  @include desktop {
+    font-size: 0.875rem;
+  }
 }
