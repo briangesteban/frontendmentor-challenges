@@ -67,6 +67,11 @@ body {
   box-shadow: 0.5rem 0.5rem hsl(0, 0%, 7%);
   max-width: 24rem;
 }
+@media only screen and (min-width: 1440px) {
+  .blog-card {
+    margin-inline: auto;
+  }
+}
 .blog-card__thumbnail {
   border-radius: 0.625rem;
   width: 100%;

@@ -32,6 +32,10 @@
   box-shadow: 0.5rem 0.5rem $clr-neut-drk;
   max-width: 24rem;
 
+  @include desktop {
+    margin-inline: auto;
+  }
+
   &__thumbnail {
     border-radius: 0.625rem;
     width: 100%;
