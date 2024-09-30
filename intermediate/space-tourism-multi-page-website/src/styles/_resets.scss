@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+a {
+  font: inherit;
+  cursor: pointer;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  height: inherit;
+}
