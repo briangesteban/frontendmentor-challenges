@@ -87,14 +87,33 @@ body {
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
   background-color: hsl(0, 0%, 7%);
   padding: 0.5rem;
 }
 .footer__attribution {
   color: hsl(0, 0%, 100%);
   text-align: center;
+  max-width: 15rem;
+  line-height: 1.5rem;
 }
 .footer__attribution-link {
-  color: hsl(0, 0%, 100%);
+  color: hsl(47, 88%, 63%);
   text-decoration: none;
+  position: relative;
+}
+.footer__attribution-link::after {
+  content: "";
+  display: block;
+  background-color: hsl(47, 88%, 63%);
+  width: 0;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 500ms;
+}
+.footer__attribution-link:is(:hover, :active)::after {
+  width: 100%;
 }
