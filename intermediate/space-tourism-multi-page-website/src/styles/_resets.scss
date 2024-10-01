@@ -1,3 +1,5 @@
+@use "./colors" as *;
+
 *,
 *::before,
 *::after {
@@ -17,9 +19,13 @@ a {
 }
 
 body {
+  background-color: $clr-primary-drk;
+  color: $clr-neut-lgt;
   min-height: 100vh;
 }
 
 #root {
-  height: inherit;
+  display: flex;
+  flex-direction: column;
+  min-height: inherit;
 }

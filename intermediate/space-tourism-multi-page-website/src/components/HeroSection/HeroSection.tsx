@@ -1,7 +1,27 @@
 import "./HeroSection.scss";
 
 const HeroSection = () => {
-  return <></>;
+  return (
+    <header className="hero-section">
+      <div className="hero-section__wrapper">
+        <h1 className="hero-section__header">
+          <div className="hero-section__header--small">
+            So, You want to travel to
+          </div>
+          <div className="hero-section__header--big">Space</div>
+        </h1>
+        <p className="hero-section__details">
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </p>
+      </div>
+      <div className="hero-section__wrapper">
+        <button className="hero-section__btn-cta">Explore</button>
+      </div>
+    </header>
+  );
 };
 
 export { HeroSection };

@@ -1,0 +1,32 @@
+@use "./colors" as *;
+
+@mixin button-cta($dimension) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $clr-neut-lgt;
+  color: $clr-primary-drk;
+  border: none;
+  border-radius: 25rem;
+  text-transform: uppercase;
+  width: $dimension;
+  height: $dimension;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: rgba($clr-neut-lgt, 0.1);
+    border-radius: inherit;
+    opacity: 0;
+    width: 20rem;
+    height: 20rem;
+    transition: opacity 500ms;
+  }
+
+  &:is(:hover, :active, :focus-visible) {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
