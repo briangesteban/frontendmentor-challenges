@@ -1,6 +1,6 @@
 @use "./colors" as *;
 
-@mixin button-cta($dimension) {
+@mixin button-cta() {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,9 +9,14 @@
   border: none;
   border-radius: 25rem;
   text-transform: uppercase;
-  width: $dimension;
-  height: $dimension;
+  width: 9rem;
+  height: 9rem;
   position: relative;
+  // transition: width 500ms, height 500ms;
+  // @media only screen and (min-width: 1440px) {
+  //   width: 17rem;
+  //   height: 17rem;
+  // }
 
   &::after {
     content: "";

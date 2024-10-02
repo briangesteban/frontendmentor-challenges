@@ -1,17 +1,34 @@
 @use "../../styles/components" as *;
+@use "../../styles/colors" as *;
 
 .hero-section {
+  background: $clr-primary-drk
+    url("../../assets/home/background-home-mobile.jpg") no-repeat fixed center
+    bottom;
+  background-size: cover;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-inline: 1.5rem;
+  margin-inline: auto;
 
   &__wrapper {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    width: 100%;
+
+    &:first-of-type {
+      padding-top: 7rem;
+      padding-bottom: 0;
+    }
+
+    &:last-of-type {
+      padding-top: 0;
+    }
   }
 
   &__header {
@@ -32,6 +49,6 @@
   }
 
   &__btn-cta {
-    @include button-cta(9rem);
+    @include button-cta();
   }
 }
