@@ -19,15 +19,19 @@
   }
 
   &__btn-burger {
-    display: none;
     background-color: transparent;
     border: none;
+    width: 1.5rem;
+    height: 1.3125rem;
   }
 
   &__btn-close {
+    @extend .nav-bar__btn-burger;
+    display: block;
   }
 
   &__btn-icon {
+    width: inherit;
   }
 
   &__btn-wrapper {
@@ -37,39 +41,45 @@
     margin-bottom: 5rem;
   }
 
-  &__overlay {
-    display: block;
-    background-color: rgba($clr-primary-drk, 0.15);
+  &__menu {
     width: 100%;
     height: 100vh;
     max-width: 15.875rem;
     position: fixed;
-    inset: 0 0 auto auto;
+    inset: 0 -15.875rem auto auto;
     z-index: 99;
-    // pointer-events: none;
+    transition: right 500ms;
 
-    &::after {
-      content: "";
-      display: block;
-      backdrop-filter: blur(5rem);
-      position: inherit;
-      inset: 0 0 auto auto;
-      width: 100%;
-      height: inherit;
-      max-width: inherit;
+    &--open {
+      right: 0;
     }
   }
 
-  &__menu {
+  // Needs to fix pointer events
+  &__overlay {
+    display: block;
+    background-color: rgba($clr-primary-drk, 0.15);
+    width: inherit;
+    height: inherit;
+    position: inherit;
+
+    &::after {
+      content: "";
+      display: inherit;
+      backdrop-filter: blur(5rem);
+      position: inherit;
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &__navigation {
     display: flex;
     flex-direction: column;
     padding: 2rem 0 2rem 2rem;
+    position: absolute;
     width: 100%;
-    height: 100vh;
-    max-width: 15.875rem;
-    position: fixed;
-    inset: 0 0 auto auto;
-    z-index: 99;
+    height: inherit;
 
     &-link {
       color: $clr-neut-lgt;
@@ -84,10 +94,5 @@
       &--number {
       }
     }
-  }
-
-  &__btn-close {
-    @extend .nav-bar__btn-burger;
-    display: block;
   }
 }
