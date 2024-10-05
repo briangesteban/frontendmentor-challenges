@@ -1,4 +1,5 @@
 @use "./colors" as *;
+@use "./typography" as *;
 
 *,
 *::before,
@@ -20,8 +21,9 @@ a {
 
 body {
   background-color: $clr-primary-drk;
-  color: $clr-neut-lgt;
+  color: $clr-primary-lgt;
   min-height: 100vh;
+  @include text-preset9;
 }
 
 #root {

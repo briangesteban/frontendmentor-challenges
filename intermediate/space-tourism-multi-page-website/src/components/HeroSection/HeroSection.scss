@@ -1,5 +1,6 @@
 @use "../../styles/components" as *;
 @use "../../styles/colors" as *;
+@use "../../styles/typography" as *;
 
 .hero-section {
   background: $clr-primary-drk
@@ -36,11 +37,12 @@
     text-transform: uppercase;
 
     &--small {
-      margin-bottom: 1.5rem;
+      @include text-preset6;
     }
 
     &--big {
-      @extend .hero-section__header--small;
+      color: $clr-neut-lgt;
+      @include text-preset1;
     }
   }
 
