@@ -12,6 +12,15 @@
   @include tablet {
     justify-content: flex-start;
     padding: 0;
+    max-width: none;
+    margin-top: 0;
+    transition: max-width 500ms, margin-top 500ms;
+  }
+
+  @include desktop {
+    max-width: 90rem;
+    margin-top: 2.5rem;
+    align-self: center;
   }
 
   &__link {
@@ -22,6 +31,10 @@
       margin: 1.5rem 2.5rem;
       width: 3rem;
       height: 3rem;
+    }
+
+    @include desktop {
+      margin-inline: 4rem;
     }
   }
 
@@ -78,7 +91,23 @@
       position: relative;
       inset: auto;
       height: 6rem;
-      max-width: none;
+      max-width: 100%;
+      transition: max-width 500ms;
+    }
+
+    @include desktop {
+      max-width: 46rem;
+      margin-left: auto;
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 50% auto auto 0;
+        transform: translateX(-33rem);
+        background-color: rgba($clr-neut-lgt, 0.25);
+        height: 0.0625rem;
+        width: 35rem;
+      }
     }
 
     &--open {
@@ -129,11 +158,17 @@
       padding-inline: 2.5rem;
     }
 
+    @include desktop {
+      padding-inline: 4rem;
+    }
+
     &-link {
-      @include text-preset8;
-      color: $clr-neut-lgt;
+      font-family: $fs-barlow-condensed;
+      font-size: 1rem;
+      letter-spacing: 0.125rem;
       text-decoration: none;
       text-transform: uppercase;
+      color: $clr-neut-lgt;
       margin-bottom: 2rem;
       border-color: rgba($clr-neut-lgt, 0);
       transition: border-color 1s;

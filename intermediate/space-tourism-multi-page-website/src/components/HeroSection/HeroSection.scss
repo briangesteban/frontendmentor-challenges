@@ -18,7 +18,11 @@
   }
 
   @include desktop {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
     background-image: url("../../assets/home/background-home-desktop.jpg");
+    padding: 34.5625rem 0 8rem 0;
   }
 
   &__wrapper {
@@ -30,6 +34,10 @@
     width: 100%;
     transition: padding 500ms;
 
+    @include desktop {
+      width: auto;
+    }
+
     &:first-of-type {
       padding-top: 7rem;
       padding-bottom: 0;
@@ -37,17 +45,33 @@
       @include tablet {
         padding-top: 14rem;
       }
+
+      @include desktop {
+        align-items: flex-start;
+        padding: 0;
+        margin-right: 9.3125rem;
+      }
     }
 
     &:last-of-type {
       flex-grow: 1;
       padding-top: 0;
+
+      @include desktop {
+        flex-grow: 0;
+        padding: 2.21875rem 0;
+        margin-left: 9.3125rem;
+      }
     }
   }
 
   &__header {
     text-align: center;
     text-transform: uppercase;
+
+    @include desktop {
+      text-align: left;
+    }
 
     &--small {
       font-family: $fs-barlow-condensed;
@@ -58,6 +82,10 @@
 
       @include tablet {
         font-size: 1.75rem;
+      }
+
+      @include desktop {
+        letter-spacing: 0.25rem;
       }
     }
 
@@ -70,7 +98,7 @@
       transition: font-size 500ms;
 
       @include tablet {
-        font-size: 9.375rem;
+        font-size: 9rem;
       }
     }
   }
@@ -83,6 +111,11 @@
     @include tablet {
       font-size: 1rem;
       max-width: 32rem;
+    }
+
+    @include desktop {
+      font-size: 1.125rem;
+      text-align: left;
     }
   }
 
