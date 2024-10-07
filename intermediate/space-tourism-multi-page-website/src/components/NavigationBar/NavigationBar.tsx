@@ -1,10 +1,21 @@
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../../utils/redux/state/store";
+import {
+  open,
+  close,
+} from "../../utils/redux/state/slices/isNavOpen/isNavOpen";
 import Logo from "../../assets/shared/logo.svg";
 import BurgerIcon from "../../assets/shared/icon-hamburger.svg";
 import CloseIcon from "../../assets/shared/icon-close.svg";
 import "./NavigationBar.scss";
 
 const NavigationBar = () => {
+  const navState: boolean = useSelector(
+    (state: RootState): boolean => state.isNavOpen.value
+  );
+  const dispatch = useDispatch();
+
   return (
     <nav className="nav-bar">
       <Link to="/home" className="nav-bar__link">
@@ -13,8 +24,7 @@ const NavigationBar = () => {
       <button
         className="nav-bar__btn-burger"
         onClick={() => {
-          const navigation = document.querySelector(".nav-bar__menu");
-          navigation?.classList.add("nav-bar__menu--open");
+          dispatch(open());
         }}
       >
         <img
@@ -23,15 +33,18 @@ const NavigationBar = () => {
           className="nav-bar__btn-icon"
         />
       </button>
-      <aside className="nav-bar__menu">
+      <aside
+        className={
+          !navState ? "nav-bar__menu" : "nav-bar__menu nav-bar__menu--open"
+        }
+      >
         <div className="nav-bar__overlay"></div>
         <div className="nav-bar__navigation">
           <div className="nav-bar__btn-wrapper">
             <button
               className="nav-bar__btn-close"
               onClick={() => {
-                const navigation = document.querySelector(".nav-bar__menu");
-                navigation?.classList.remove("nav-bar__menu--open");
+                dispatch(close());
               }}
             >
               <img
