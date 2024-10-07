@@ -1,23 +1,29 @@
 @use "./colors" as *;
 @use "./typography" as *;
+@use "./medias" as *;
 
 @mixin button-cta() {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: $fs-bellefair;
+  font-size: 1.125rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-transform: uppercase;
   background-color: $clr-neut-lgt;
   color: $clr-primary-drk;
   border: none;
   border-radius: 25rem;
-  text-transform: uppercase;
   width: 9rem;
   height: 9rem;
-  @include text-preset4;
-  // transition: width 500ms, height 500ms;
-  // @media only screen and (min-width: 1440px) {
-  //   width: 17rem;
-  //   height: 17rem;
-  // }
+  transition: width 500ms, height 500ms, font-size 500ms;
+
+  @include tablet {
+    font-size: 2rem;
+    width: 17rem;
+    height: 17rem;
+  }
 
   &::after {
     content: "";
@@ -27,7 +33,12 @@
     opacity: 0;
     width: 20rem;
     height: 20rem;
-    transition: opacity 500ms;
+    transition: opacity 500ms, width 500ms, height 500ms;
+
+    @include tablet {
+      width: 27.875rem;
+      height: 27.875rem;
+    }
   }
 
   &:is(:hover, :active, :focus-visible) {

@@ -10,6 +10,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-weight: 400;
 }
 
 button,
@@ -20,10 +21,13 @@ a {
 }
 
 body {
+  font-family: $fs-barlow;
+  font-size: 0.9375rem;
+  letter-spacing: 0px;
+  line-height: normal;
   background-color: $clr-primary-drk;
   color: $clr-primary-lgt;
   min-height: 100vh;
-  @include text-preset9;
 }
 
 #root {

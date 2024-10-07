@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../utils/redux/state/store";
-import {
-  open,
-  close,
-} from "../../utils/redux/state/slices/isNavOpen/isNavOpen";
+import { open, close } from "../../utils/redux/state/slices/isNavOpen";
 import Logo from "../../assets/shared/logo.svg";
 import BurgerIcon from "../../assets/shared/icon-hamburger.svg";
 import CloseIcon from "../../assets/shared/icon-close.svg";
@@ -40,7 +37,7 @@ const NavigationBar = () => {
       >
         <div className="nav-bar__overlay"></div>
         <div className="nav-bar__navigation">
-          <div className="nav-bar__btn-wrapper">
+          <div className="nav-bar__btn-wrapper nav-bar__btn-wrapper--close">
             <button
               className="nav-bar__btn-close"
               onClick={() => {
@@ -58,17 +55,39 @@ const NavigationBar = () => {
             to="/"
             className="nav-bar__navigation-link nav-bar__navigation-link--active"
           >
-            <span className="nav-bar__navigation-link--number">00</span> Home
+            <span
+              className="nav-bar__navigation-link--number"
+              aria-hidden="true"
+            >
+              00
+            </span>
+            Home
           </Link>
           <Link to="/" className="nav-bar__navigation-link">
-            <span className="nav-bar__navigation-link--number">01</span>{" "}
+            <span
+              className="nav-bar__navigation-link--number"
+              aria-hidden="true"
+            >
+              01
+            </span>
             Destination
           </Link>
           <Link to="/" className="nav-bar__navigation-link">
-            <span className="nav-bar__navigation-link--number">02</span> Crew
+            <span
+              className="nav-bar__navigation-link--number"
+              aria-hidden="true"
+            >
+              02
+            </span>
+            Crew
           </Link>
           <Link to="/" className="nav-bar__navigation-link">
-            <span className="nav-bar__navigation-link--number">03</span>{" "}
+            <span
+              className="nav-bar__navigation-link--number"
+              aria-hidden="true"
+            >
+              03
+            </span>
             Technology
           </Link>
         </div>

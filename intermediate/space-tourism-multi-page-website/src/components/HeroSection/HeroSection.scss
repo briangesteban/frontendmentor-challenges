@@ -1,6 +1,7 @@
 @use "../../styles/components" as *;
 @use "../../styles/colors" as *;
 @use "../../styles/typography" as *;
+@use "../../styles/medias" as *;
 
 .hero-section {
   background: $clr-primary-drk
@@ -11,7 +12,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-inline: auto;
+
+  @include tablet {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
+
+  @include desktop {
+    background-image: url("../../assets/home/background-home-desktop.jpg");
+  }
 
   &__wrapper {
     display: flex;
@@ -20,17 +28,19 @@
     align-items: center;
     padding: 1.5rem;
     width: 100%;
-
-    &:nth-of-type(2) {
-      flex-grow: 1;
-    }
+    transition: padding 500ms;
 
     &:first-of-type {
       padding-top: 7rem;
       padding-bottom: 0;
+
+      @include tablet {
+        padding-top: 14rem;
+      }
     }
 
     &:last-of-type {
+      flex-grow: 1;
       padding-top: 0;
     }
   }
@@ -40,17 +50,40 @@
     text-transform: uppercase;
 
     &--small {
-      @include text-preset6;
+      font-family: $fs-barlow-condensed;
+      font-size: 1rem;
+      letter-spacing: 0.15rem;
+      margin-bottom: 1.5rem;
+      transition: font-size 500ms;
+
+      @include tablet {
+        font-size: 1.75rem;
+      }
     }
 
     &--big {
+      font-family: $fs-bellefair;
+      font-size: 5rem;
+      letter-spacing: 0px;
       color: $clr-neut-lgt;
-      @include text-preset1;
+      margin-bottom: 1.5rem;
+      transition: font-size 500ms;
+
+      @include tablet {
+        font-size: 9.375rem;
+      }
     }
   }
 
   &__details {
+    line-height: 1.8;
     text-align: center;
+    transition: font-size 500ms;
+
+    @include tablet {
+      font-size: 1rem;
+      max-width: 32rem;
+    }
   }
 
   &__btn-cta {

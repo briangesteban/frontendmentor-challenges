@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import isNavOpen from "./slices/isNavOpen/isNavOpen";
+import isNavOpen from "./slices/isNavOpen";
 
 export const store = configureStore({
   reducer: { isNavOpen },

@@ -1,5 +1,3 @@
-@use "./medias" as *;
-
 // *** Font Imports ***
 // Barlow Regular
 @font-face {
@@ -35,139 +33,65 @@ $fs-bellefair: "Bellefair", Georgia, "Times New Roman", Times, serif;
 // Text Preset 1
 @mixin text-preset1 {
   font-family: $fs-bellefair;
-  font-size: 5rem;
-  font-weight: 400;
+  font-size: 9rem;
+  line-height: 1.719;
   letter-spacing: 0px;
-
-  @include desktop {
-    font-size: 9rem;
-    line-height: 1.719;
-  }
 }
 
 // Text Preset 2
 @mixin text-preset2 {
   font-family: $fs-bellefair;
-  font-size: 3.5rem;
-  font-weight: 400;
+  font-size: 6.25rem;
+  line-height: 1.146;
   letter-spacing: 0px;
-
-  @include tablet {
-    font-size: 5rem;
-  }
-
-  @include desktop {
-    font-size: 6.25rem;
-    line-height: 1.146;
-  }
 }
 
 // Text Preset 3
 @mixin text-preset3 {
   font-family: $fs-bellefair;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 3.5rem;
   letter-spacing: 0px;
-
-  @include tablet {
-    font-size: 2.5rem;
-  }
-
-  @include desktop {
-    font-size: 3.5rem;
-    line-height: 0.642;
-  }
 }
 
 // Text Preset 4
 @mixin text-preset4 {
   font-family: $fs-bellefair;
-  font-size: 1.125rem;
-  font-weight: 400;
+  font-size: 2rem;
   letter-spacing: 0px;
-
-  @include tablet {
-    font-size: 1.5rem;
-  }
-
-  @include desktop {
-    font-size: 2rem;
-    line-height: 0.367;
-  }
 }
 
 // Text Preset 5
 @mixin text-preset5 {
   font-family: $fs-bellefair;
   font-size: 1.75rem;
-  font-weight: 400;
-  line-height: 0.336;
   letter-spacing: 0.25rem;
-
-  @include tablet {
-    font-family: $fs-barlow-condensed;
-    font-size: 1.25rem;
-    letter-spacing: 0.15rem;
-  }
-
-  @include desktop {
-    font-family: $fs-bellefair;
-    font-size: 1.75rem;
-    letter-spacing: 0.25rem;
-  }
 }
 
 // Text Preset 6
 @mixin text-preset6 {
-  font-family: $fs-barlow-condensed;
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 0.15rem;
-
-  @include desktop {
-    font-family: $fs-bellefair;
-    font-size: 1.75rem;
-    line-height: 0.321;
-    letter-spacing: 0px;
-  }
+  font-family: $fs-bellefair;
+  font-size: 1.75rem;
+  letter-spacing: 0px;
 }
 
 // Text Preset 7
 @mixin text-preset7 {
   font-family: $fs-barlow-condensed;
   font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 0.168;
   letter-spacing: 0.125rem;
 }
 
 // Text Preset 8
 @mixin text-preset8 {
   font-family: $fs-barlow-condensed;
-  font-size: 0.875rem;
-  font-weight: 400;
-  letter-spacing: 0.15rem;
-
-  @include desktop {
-    font-size: 1rem;
-    line-height: 0.192;
-    letter-spacing: 0.125rem;
-  }
+  font-size: 1rem;
+  letter-spacing: 0.125rem;
 }
 
 // Text Preset 9
 @mixin text-preset9 {
   font-family: $fs-barlow;
-  font-size: 0.9375rem;
-  font-weight: 400;
+  font-size: 1.125rem;
   line-height: 1.8;
   letter-spacing: 0px;
-
-  @include tablet {
-    font-size: 1rem;
-  }
-
-  @include desktop {
-    font-size: 1.125rem;
-  }
 }
