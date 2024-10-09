@@ -15,7 +15,11 @@ const NavigationBar = () => {
 
   return (
     <nav className="nav-bar">
-      <Link to="/home" className="nav-bar__link">
+      <Link
+        to="/home"
+        className="nav-bar__link"
+        aria-label="Go to Space Tourism Home Page"
+      >
         <img src={Logo} alt="Space Tourism Logo" className="nav-bar__logo" />
       </Link>
       <button

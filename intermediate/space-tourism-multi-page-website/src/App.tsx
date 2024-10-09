@@ -3,6 +3,7 @@ import { RootState } from "./utils/redux/state/store";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { NavigationBar } from "./components/NavigationBar/NavigationBar";
 import { HomePage } from "./pages/HomePage";
+import { DestinationPage } from "./pages/DestinationPage/DestinationPage";
 import "./App.scss";
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<HomePage />} />
+        <Route path="/destination/:loc" element={<DestinationPage />} />
         <Route path="*" element={<h1>404: Page Not Found</h1>} />
       </Routes>
     </BrowserRouter>
