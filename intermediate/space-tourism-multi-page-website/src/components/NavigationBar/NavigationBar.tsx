@@ -56,8 +56,9 @@ const NavigationBar = () => {
             </button>
           </div>
           <Link
-            to="/"
+            to="/home"
             className="nav-bar__navigation-link nav-bar__navigation-link--active"
+            aria-label="Go to Home Page"
           >
             <span
               className="nav-bar__navigation-link--number"
@@ -67,7 +68,11 @@ const NavigationBar = () => {
             </span>
             Home
           </Link>
-          <Link to="/" className="nav-bar__navigation-link">
+          <Link
+            to="/destination/moon"
+            className="nav-bar__navigation-link"
+            aria-label="Go to Destination Page"
+          >
             <span
               className="nav-bar__navigation-link--number"
               aria-hidden="true"
@@ -76,7 +81,11 @@ const NavigationBar = () => {
             </span>
             Destination
           </Link>
-          <Link to="/" className="nav-bar__navigation-link">
+          <Link
+            to="/"
+            className="nav-bar__navigation-link"
+            aria-label="Go to Crew Page"
+          >
             <span
               className="nav-bar__navigation-link--number"
               aria-hidden="true"
@@ -85,7 +94,11 @@ const NavigationBar = () => {
             </span>
             Crew
           </Link>
-          <Link to="/" className="nav-bar__navigation-link">
+          <Link
+            to="/"
+            className="nav-bar__navigation-link"
+            aria-label="Go to Technology Page"
+          >
             <span
               className="nav-bar__navigation-link--number"
               aria-hidden="true"
