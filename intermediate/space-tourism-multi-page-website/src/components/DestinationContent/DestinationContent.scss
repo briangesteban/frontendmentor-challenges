@@ -1,4 +1,5 @@
 @use "../../styles/colors" as *;
+@use "../../styles/typography" as *;
 
 .destination {
   &__page-title {
@@ -9,13 +10,22 @@
   }
 
   &__wrapper {
+    &:first-of-type {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__image-stack {
   }
 
   &__image {
-    width: 100%;
+    width: 9.375rem;
+    height: 9.375rem;
+    aspect-ratio: 1/1;
+    margin-top: 3.15625rem;
+    margin-bottom: 3.65625rem;
   }
 
   &__nav {
@@ -28,6 +38,7 @@
       text-decoration: none;
       letter-spacing: 0.15;
       position: relative;
+      z-index: -1;
 
       &::after {
         content: "";
@@ -63,9 +74,18 @@
   }
 
   &__title {
+    font-family: $fs-bellefair;
+    font-size: 3.5rem;
+    font-weight: normal;
+    color: $clr-neut-lgt;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
   }
 
   &__details {
+    line-height: 1.8;
+    text-align: center;
   }
 }
 

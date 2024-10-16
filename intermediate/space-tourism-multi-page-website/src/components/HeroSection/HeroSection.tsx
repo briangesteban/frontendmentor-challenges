@@ -1,6 +1,12 @@
+import { useSelector } from "react-redux";
+import { RootState } from "../../utils/redux/state/store";
 import "./HeroSection.scss";
 
 const HeroSection = () => {
+  const navState: boolean = useSelector(
+    (state: RootState): boolean => state.isNavOpen.value
+  );
+
   return (
     <header className="hero-section">
       <div className="hero-section__wrapper">
@@ -18,7 +24,9 @@ const HeroSection = () => {
         </p>
       </div>
       <div className="hero-section__wrapper">
-        <button className="hero-section__btn-cta">Explore</button>
+        <button tabIndex={navState ? -1 : 0} className="hero-section__btn-cta">
+          Explore
+        </button>
       </div>
     </header>
   );

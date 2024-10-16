@@ -17,6 +17,7 @@ const NavigationBar = () => {
     <nav className="nav-bar">
       <Link
         to="/home"
+        tabIndex={navState ? -1 : 0}
         className="nav-bar__link"
         aria-label="Go to Space Tourism Home Page"
       >
@@ -43,6 +44,7 @@ const NavigationBar = () => {
         <div className="nav-bar__navigation">
           <div className="nav-bar__btn-wrapper nav-bar__btn-wrapper--close">
             <button
+              tabIndex={navState ? 0 : -1}
               className="nav-bar__btn-close"
               onClick={() => {
                 dispatch(close());
@@ -57,6 +59,7 @@ const NavigationBar = () => {
           </div>
           <Link
             to="/home"
+            tabIndex={navState ? 0 : -1}
             className="nav-bar__navigation-link nav-bar__navigation-link--active"
             aria-label="Go to Home Page"
           >
@@ -70,6 +73,7 @@ const NavigationBar = () => {
           </Link>
           <Link
             to="/destination/moon"
+            tabIndex={navState ? 0 : -1}
             className="nav-bar__navigation-link"
             aria-label="Go to Destination Page"
           >
@@ -83,6 +87,7 @@ const NavigationBar = () => {
           </Link>
           <Link
             to="/"
+            tabIndex={navState ? 0 : -1}
             className="nav-bar__navigation-link"
             aria-label="Go to Crew Page"
           >
@@ -96,6 +101,7 @@ const NavigationBar = () => {
           </Link>
           <Link
             to="/"
+            tabIndex={navState ? 0 : -1}
             className="nav-bar__navigation-link"
             aria-label="Go to Technology Page"
           >
