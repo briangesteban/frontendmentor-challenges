@@ -1,9 +1,43 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
+import data from "../../data/data.json";
 import MoonImagePng from "../../assets/destination/image-moon.png";
 import MoonImageWebp from "../../assets/destination/image-moon.webp";
 import "./DestinationContent.scss";
 
+interface IDestinationsData {
+  name: string;
+  images: {
+    png: string;
+    webp: string;
+  };
+  description: string;
+  distance: string;
+  travel: string;
+}
+
+interface IDestinations {
+  name: string;
+  images: {
+    png: string;
+    webp: string;
+  };
+  description: string;
+  distance: string;
+  travel: string;
+}
+
 const DestinationContent = () => {
+  const { loc: URL_PARAM } = useParams();
+  const destinationsData: IDestinationsData[] = data.destinations;
+  const destinations: IDestinations | undefined = destinationsData.find(
+    (destination) => destination.name.toLowerCase() === URL_PARAM
+  );
+
+  // Redirect to Not Found Page
+  if (!destinations) {
+    return <Navigate to="not-found" />;
+  }
+
   return (
     <section className="destination">
       <h2 className="destination__page-title">
@@ -20,17 +54,42 @@ const DestinationContent = () => {
         <div className="destination__nav">
           <Link
             to="/destination/moon"
-            className="destination__nav-link destination__nav-link--active"
+            className={
+              URL_PARAM === "moon"
+                ? "destination__nav-link destination__nav-link--active"
+                : "destination__nav-link"
+            }
           >
             Moon
           </Link>
-          <Link to="/destination/mars" className="destination__nav-link">
+          <Link
+            to="/destination/mars"
+            className={
+              URL_PARAM === "mars"
+                ? "destination__nav-link destination__nav-link--active"
+                : "destination__nav-link"
+            }
+          >
             Mars
           </Link>
-          <Link to="/destination/europa" className="destination__nav-link">
+          <Link
+            to="/destination/europa"
+            className={
+              URL_PARAM === "europa"
+                ? "destination__nav-link destination__nav-link--active"
+                : "destination__nav-link"
+            }
+          >
             Europa
           </Link>
-          <Link to="/destination/titan" className="destination__nav-link">
+          <Link
+            to="/destination/titan"
+            className={
+              URL_PARAM === "titan"
+                ? "destination__nav-link destination__nav-link--active"
+                : "destination__nav-link"
+            }
+          >
             Titan
           </Link>
         </div>

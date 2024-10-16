@@ -1,6 +1,6 @@
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "./utils/redux/state/store";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { NavigationBar } from "./components/NavigationBar/NavigationBar";
 import { HomePage } from "./pages/HomePage";
 import { DestinationPage } from "./pages/DestinationPage/DestinationPage";
