@@ -7,7 +7,7 @@ const DestinationContent = () => {
   return (
     <section className="destination">
       <h2 className="destination__page-title">
-        <span className="destination__header--number">01</span>Pick Your
+        <span className="destination__page-title--number">01</span>Pick Your
         Destination
       </h2>
       <div className="destination__wrapper">
@@ -43,16 +43,12 @@ const DestinationContent = () => {
         </p>
         <div className="destination-stat">
           <h4 className="destination-stat__detail">
-            <span className="destination-stat__detail-title">
-              Avg. Distance
-            </span>
-            384,400 km
+            Avg. Distance
+            <span className="destination-stat__detail-value">384,400 km</span>
           </h4>
           <h4 className="destination-stat__detail">
-            <span className="destination-stat__detail-title">
-              Est. Travel Time
-            </span>
-            3 Days
+            Est. Travel Time
+            <span className="destination-stat__detail-value">3 Days</span>
           </h4>
         </div>
       </div>
