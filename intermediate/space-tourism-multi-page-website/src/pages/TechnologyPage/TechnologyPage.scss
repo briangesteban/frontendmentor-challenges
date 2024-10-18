@@ -1,0 +1,48 @@
+@use "../../styles/colors" as *;
+@use "../../styles/medias" as *;
+
+.content {
+  background-color: $clr-primary-drk;
+  padding: 7rem 1.5rem 1.5rem 1.5rem;
+
+  &--destination {
+    background: url("../../assets/destination/background-destination-mobile.jpg")
+      no-repeat;
+    background-size: contain;
+
+    @include tablet {
+      background-image: url("../../assets/destination/background-destination-tablet.jpg");
+    }
+
+    @include desktop {
+      background-image: url("../../assets/destination/background-destination-desktop.jpg");
+    }
+  }
+
+  &--crew {
+    background: url("../../assets/crew/background-crew-mobile.jpg") no-repeat;
+    background-size: contain;
+
+    @include tablet {
+      background-image: url("../../assets/crew/background-crew-tablet.jpg");
+    }
+
+    @include desktop {
+      background-image: url("../../assets/crew/background-crew-desktop.jpg");
+    }
+  }
+
+  &--technology {
+    background: url("../../assets/technology/background-technology-mobile.jpg")
+      no-repeat;
+    background-size: contain;
+
+    @include tablet {
+      background-image: url("../../assets/technology/background-technology-tablet.jpg");
+    }
+
+    @include desktop {
+      background-image: url("../../assets/technology/background-technology-desktop.jpg");
+    }
+  }
+}

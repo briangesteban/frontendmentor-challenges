@@ -5,7 +5,7 @@ interface ICurrentPath {
 }
 
 const initialState: ICurrentPath = {
-  value: "/",
+  value: "/home",
 };
 
 const currentPath = createSlice({

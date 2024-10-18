@@ -1,10 +1,9 @@
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { RootState } from "../../utils/redux/state/store";
-import { DestinationContent } from "../../components/DestinationContent/DestinationContent";
-import "./DestinationPage.scss";
+import "./CrewPage.scss";
 
-const DestinationPage = () => {
+const CrewPage = () => {
   const currPathState: string = useSelector(
     (state: RootState) => state.currentPath.value
   );
@@ -21,11 +20,7 @@ const DestinationPage = () => {
   }, []);
 
   if (currPathState)
-    return (
-      <main className={`content content${classModifier}`}>
-        <DestinationContent />
-      </main>
-    );
+    return <main className={`content content${classModifier}`}></main>;
 };
 
-export { DestinationPage };
+export { CrewPage };

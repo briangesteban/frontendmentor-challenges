@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../utils/redux/state/store";
 import { open, close } from "../../utils/redux/state/slices/isNavOpen";
+import { update } from "../../utils/redux/state/slices/currentPath";
 import Logo from "../../assets/shared/logo.svg";
 import BurgerIcon from "../../assets/shared/icon-hamburger.svg";
 import CloseIcon from "../../assets/shared/icon-close.svg";
@@ -11,7 +13,32 @@ const NavigationBar = () => {
   const navState: boolean = useSelector(
     (state: RootState): boolean => state.isNavOpen.value
   );
+  const currPathState: string = useSelector(
+    (state: RootState) => state.currentPath.value
+  );
   const dispatch = useDispatch();
+  const { pathname } = useLocation();
+
+  // Check current root path to prevent unwanted execution of useEffect.
+  if (!pathname.startsWith(currPathState)) {
+    if (pathname.startsWith("/home")) {
+      dispatch(update("/home"));
+    }
+    if (pathname.startsWith("/destination")) {
+      dispatch(update("/destination"));
+    }
+    if (pathname.startsWith("/crew")) {
+      dispatch(update("/crew"));
+    }
+    if (pathname.startsWith("/technology")) {
+      dispatch(update("/technology"));
+    }
+  }
+
+  // Tracks current root path, dispatch reducer when changes happen.
+  useEffect(() => {
+    dispatch(close());
+  }, [currPathState]);
 
   return (
     <nav className="nav-bar">
@@ -60,7 +87,11 @@ const NavigationBar = () => {
           <Link
             to="/home"
             tabIndex={navState ? 0 : -1}
-            className="nav-bar__navigation-link nav-bar__navigation-link--active"
+            className={
+              currPathState === "/home"
+                ? "nav-bar__navigation-link nav-bar__navigation-link--active"
+                : "nav-bar__navigation-link"
+            }
             aria-label="Go to Home Page"
           >
             <span
@@ -74,7 +105,11 @@ const NavigationBar = () => {
           <Link
             to="/destination/moon"
             tabIndex={navState ? 0 : -1}
-            className="nav-bar__navigation-link"
+            className={
+              currPathState === "/destination"
+                ? "nav-bar__navigation-link nav-bar__navigation-link--active"
+                : "nav-bar__navigation-link"
+            }
             aria-label="Go to Destination Page"
           >
             <span
@@ -86,9 +121,13 @@ const NavigationBar = () => {
             Destination
           </Link>
           <Link
-            to="/"
+            to="/crew"
             tabIndex={navState ? 0 : -1}
-            className="nav-bar__navigation-link"
+            className={
+              currPathState === "/crew"
+                ? "nav-bar__navigation-link nav-bar__navigation-link--active"
+                : "nav-bar__navigation-link"
+            }
             aria-label="Go to Crew Page"
           >
             <span
@@ -100,9 +139,13 @@ const NavigationBar = () => {
             Crew
           </Link>
           <Link
-            to="/"
+            to="/technology"
             tabIndex={navState ? 0 : -1}
-            className="nav-bar__navigation-link"
+            className={
+              currPathState === "/technology"
+                ? "nav-bar__navigation-link nav-bar__navigation-link--active"
+                : "nav-bar__navigation-link"
+            }
             aria-label="Go to Technology Page"
           >
             <span

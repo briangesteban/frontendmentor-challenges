@@ -47,7 +47,11 @@ const DestinationContent = () => {
       <div className="destination__wrapper">
         <picture className="destination__image-stack">
           <source src={MoonImageWebp} type="webp" />
-          <img src={MoonImagePng} alt="Moon" className="destination__image" />
+          <img
+            src={MoonImagePng}
+            alt={destinations.name}
+            className="destination__image"
+          />
         </picture>
       </div>
       <div className="destination__wrapper">
@@ -93,21 +97,20 @@ const DestinationContent = () => {
             Titan
           </Link>
         </div>
-        <h3 className="destination__title">Moon</h3>
-        <p className="destination__details">
-          See our planet as you’ve never seen it before. A perfect relaxing trip
-          away to help regain perspective and come back refreshed. While you’re
-          there, take in some history by visiting the Luna 2 and Apollo 11
-          landing sites.
-        </p>
+        <h3 className="destination__title">{destinations.name}</h3>
+        <p className="destination__details">{destinations.description}</p>
         <div className="destination-stat">
           <h4 className="destination-stat__detail">
             Avg. Distance
-            <span className="destination-stat__detail-value">384,400 km</span>
+            <span className="destination-stat__detail-value">
+              {destinations.distance}
+            </span>
           </h4>
           <h4 className="destination-stat__detail">
             Est. Travel Time
-            <span className="destination-stat__detail-value">3 Days</span>
+            <span className="destination-stat__detail-value">
+              {destinations.travel}
+            </span>
           </h4>
         </div>
       </div>
