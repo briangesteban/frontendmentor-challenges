@@ -121,7 +121,7 @@ const NavigationBar = () => {
             Destination
           </Link>
           <Link
-            to="/crew"
+            to="/crew/douglas"
             tabIndex={navState ? 0 : -1}
             className={
               currPathState === "/crew"

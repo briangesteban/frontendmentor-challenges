@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "../../utils/redux/state/store";
 import "./HeroSection.scss";
@@ -24,9 +25,13 @@ const HeroSection = () => {
         </p>
       </div>
       <div className="hero-section__wrapper">
-        <button tabIndex={navState ? -1 : 0} className="hero-section__btn-cta">
+        <Link
+          to="/destination/moon"
+          tabIndex={navState ? -1 : 0}
+          className="hero-section__btn-cta"
+        >
           Explore
-        </button>
+        </Link>
       </div>
     </header>
   );
