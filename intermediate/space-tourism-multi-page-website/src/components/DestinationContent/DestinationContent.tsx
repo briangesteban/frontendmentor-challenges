@@ -2,17 +2,6 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import data from "../../data/data.json";
 import "./DestinationContent.scss";
 
-interface IDestinationsData {
-  name: string;
-  images: {
-    png: string;
-    webp: string;
-  };
-  description: string;
-  distance: string;
-  travel: string;
-}
-
 interface IDestinations {
   name: string;
   images: {
@@ -26,7 +15,7 @@ interface IDestinations {
 
 const DestinationContent = () => {
   const { loc: urlParam } = useParams();
-  const destinationsData: IDestinationsData[] = data.destinations;
+  const destinationsData: IDestinations[] = data.destinations;
   const destinations: IDestinations | undefined = destinationsData.find(
     (destination) => destination.name.toLowerCase() === urlParam
   );

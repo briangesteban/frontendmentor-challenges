@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/home" element={<HomePage />} />
         <Route path="/destination/:loc" element={<DestinationPage />} />
         <Route path="/crew/:crew" element={<CrewPage />} />
-        <Route path="/technology" element={<TechnologyPage />} />
+        <Route path="/technology/:tech" element={<TechnologyPage />} />
         <Route path="*" element={<h1>404: Page Not Found</h1>} />
       </Routes>
     </BrowserRouter>

@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { RootState } from "../../utils/redux/state/store";
+import { TechnologyContent } from "../../components/TechnologyContent/TechnologyContent";
 import "./TechnologyPage.scss";
 
 const TechnologyPage = () => {
@@ -20,7 +21,11 @@ const TechnologyPage = () => {
   }, []);
 
   if (currPathState)
-    return <main className={`content content${classModifier}`}></main>;
+    return (
+      <main className={`content content${classModifier}`}>
+        <TechnologyContent />
+      </main>
+    );
 };
 
 export { TechnologyPage };

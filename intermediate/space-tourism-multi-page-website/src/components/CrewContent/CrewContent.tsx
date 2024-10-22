@@ -2,16 +2,6 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import data from "../../data/data.json";
 import "./CrewContent.scss";
 
-interface ICrewData {
-  name: string;
-  images: {
-    png: string;
-    webp: string;
-  };
-  role: string;
-  bio: string;
-}
-
 interface ICrew {
   name: string;
   images: {
@@ -24,7 +14,7 @@ interface ICrew {
 
 const CrewContent = () => {
   const { crew: urlParam } = useParams();
-  const crewData: ICrewData[] = data.crew;
+  const crewData: ICrew[] = data.crew;
   const crew: ICrew | undefined = crewData.find((member) => {
     if (urlParam) {
       return member.name.toLowerCase().includes(urlParam);
@@ -55,36 +45,36 @@ const CrewContent = () => {
         <div className="crew__carousel">
           <div className="crew__carousel-nav">
             <Link
-              to="/crew/douglas"
+              to="/crew/douglas hurley"
               className={
-                urlParam === "douglas"
+                urlParam === "douglas hurley"
                   ? "crew__carousel-button crew__carousel-button--active"
                   : "crew__carousel-button"
               }
               aria-label="Go to Commander Douglas Hurley's Profile"
             ></Link>
             <Link
-              to="/crew/mark"
+              to="/crew/mark shuttleworth"
               className={
-                urlParam === "mark"
+                urlParam === "mark shuttleworth"
                   ? "crew__carousel-button crew__carousel-button--active"
                   : "crew__carousel-button"
               }
               aria-label="Go to Mission Specialist Mark Shuttleworth's Profile"
             ></Link>
             <Link
-              to="/crew/victor"
+              to="/crew/victor glover"
               className={
-                urlParam === "victor"
+                urlParam === "victor glover"
                   ? "crew__carousel-button crew__carousel-button--active"
                   : "crew__carousel-button"
               }
               aria-label="Go to Pilot Victor Glover's Profile"
             ></Link>
             <Link
-              to="/crew/anousheh"
+              to="/crew/anousheh ansari"
               className={
-                urlParam === "anousheh"
+                urlParam === "anousheh ansari"
                   ? "crew__carousel-button crew__carousel-button--active"
                   : "crew__carousel-button"
               }
