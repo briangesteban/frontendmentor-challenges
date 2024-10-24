@@ -1,0 +1,109 @@
+@use "../../styles/typography" as *;
+@use "../../styles/colors" as *;
+
+.tech {
+  &__title {
+    font-family: $fs-barlow-condensed;
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: $clr-neut-lgt;
+
+    &--number {
+      font-weight: 700;
+      opacity: 0.25;
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__wrapper {
+    &:first-of-type {
+      position: relative;
+      height: 16.125rem;
+      margin-top: 5.5rem;
+    }
+
+    &:last-of-type {
+      margin-top: 2rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    inset: 0 auto auto -1.5rem;
+    width: 100vw;
+    height: inherit;
+    object-fit: contain;
+  }
+
+  &__nav {
+    width: 100%;
+    margin-bottom: 2.5rem;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      max-width: 9.5rem;
+      margin-inline: auto;
+    }
+
+    &-link {
+      font-family: $fs-bellefair;
+      font-size: 1.125rem;
+      font-weight: normal;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $clr-neut-lgt;
+      text-decoration: none;
+      background-color: transparent;
+      border: solid 0.0625rem rgba($clr-neut-lgt, 0.25);
+      border-radius: 100%;
+      width: 2.5rem;
+      height: 2.5rem;
+      transition: border-color 500ms, background-color 1s, color 1s;
+
+      &--active {
+        border: none;
+        background-color: $clr-neut-lgt;
+        color: $clr-primary-drk;
+
+        &:is(:hover, :active, :focus-visible) {
+          border: none;
+        }
+      }
+
+      &:is(:hover, :active, :focus-visible) {
+        border-color: $clr-neut-lgt;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-family: $fs-bellefair;
+    font-weight: normal;
+    font-size: 1.125rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $clr-neut-lgt;
+    opacity: 0.542;
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    font-family: $fs-bellefair;
+    font-weight: normal;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: $clr-neut-lgt;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    line-height: 1.8;
+    text-align: center;
+  }
+}

@@ -37,7 +37,7 @@ const TechnologyContent = () => {
       </h2>
       <div className="tech__wrapper">
         <img
-          src={technology?.images.landscape}
+          src={technology?.images.portrait}
           alt={technology?.name}
           className="tech__image"
         />
@@ -47,28 +47,40 @@ const TechnologyContent = () => {
           <div className="tech__nav-wrapper">
             <Link
               to="/technology/launch vehicle"
-              className="tech__nav-link"
+              className={
+                urlParam === "launch vehicle"
+                  ? "tech__nav-link tech__nav-link--active"
+                  : "tech__nav-link"
+              }
               aria-label="Go to Launch Vehicle Technology Profile"
             >
               1
             </Link>
             <Link
               to="/technology/spaceport"
-              className="tech__nav-link"
+              className={
+                urlParam === "spaceport"
+                  ? "tech__nav-link tech__nav-link--active"
+                  : "tech__nav-link"
+              }
               aria-label="Go to Launch Vehicle Technology Profile"
             >
               2
             </Link>
             <Link
               to="/technology/space capsule"
-              className="tech__nav-link"
+              className={
+                urlParam === "space capsule"
+                  ? "tech__nav-link tech__nav-link--active"
+                  : "tech__nav-link"
+              }
               aria-label="Go to Launch Vehicle Technology Profile"
             >
               3
             </Link>
           </div>
         </div>
-        <h3 className="tech__subtitle">The Terminology</h3>
+        <h3 className="tech__subtitle">The Terminology...</h3>
         <h4 className="tech__name">{technology.name}</h4>
         <p className="tech__description">{technology.description}</p>
       </div>
