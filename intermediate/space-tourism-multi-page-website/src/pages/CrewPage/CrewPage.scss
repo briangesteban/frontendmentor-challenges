@@ -7,18 +7,8 @@
   padding-top: 7rem;
   padding-bottom: 1.5rem;
 
-  &--destination {
-    background: url("../../assets/destination/background-destination-mobile.jpg")
-      no-repeat fixed center bottom;
-    background-size: cover;
-
-    @include tablet {
-      background-image: url("../../assets/destination/background-destination-tablet.jpg");
-    }
-
-    @include desktop {
-      background-image: url("../../assets/destination/background-destination-desktop.jpg");
-    }
+  @include tablet {
+    padding-bottom: 2.5rem;
   }
 
   &--crew {
@@ -32,20 +22,6 @@
 
     @include desktop {
       background-image: url("../../assets/crew/background-crew-desktop.jpg");
-    }
-  }
-
-  &--technology {
-    background: url("../../assets/technology/background-technology-mobile.jpg")
-      no-repeat fixed center bottom;
-    background-size: cover;
-
-    @include tablet {
-      background-image: url("../../assets/technology/background-technology-tablet.jpg");
-    }
-
-    @include desktop {
-      background-image: url("../../assets/technology/background-technology-desktop.jpg");
     }
   }
 }

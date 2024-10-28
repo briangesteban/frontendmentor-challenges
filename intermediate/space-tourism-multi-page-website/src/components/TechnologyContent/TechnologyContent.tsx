@@ -36,11 +36,17 @@ const TechnologyContent = () => {
         Space Launch 101
       </h2>
       <div className="tech__wrapper">
-        <img
-          src={technology?.images.portrait}
-          alt={technology?.name}
-          className="tech__image"
-        />
+        <picture className="tech__image-source">
+          <source
+            srcSet={technology?.images.landscape}
+            media="(min-width: 48rem) and (max-width: 89.9375rem)"
+          />
+          <img
+            src={technology?.images.portrait}
+            alt={technology?.name}
+            className="tech__image"
+          />
+        </picture>
       </div>
       <div className="tech__wrapper">
         <div className="tech__nav">

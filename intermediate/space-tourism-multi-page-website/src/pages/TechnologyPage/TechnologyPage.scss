@@ -2,42 +2,25 @@
 @use "../../styles/medias" as *;
 
 .content {
+  flex-grow: 1;
   background-color: $clr-primary-drk;
   padding-top: 7rem;
   padding-bottom: 1.5rem;
 
-  &--destination {
-    background: url("../../assets/destination/background-destination-mobile.jpg")
-      no-repeat fixed center bottom;
-    background-size: cover;
-
-    @include tablet {
-      background-image: url("../../assets/destination/background-destination-tablet.jpg");
-    }
-
-    @include desktop {
-      background-image: url("../../assets/destination/background-destination-desktop.jpg");
-    }
+  @include tablet {
+    padding-top: 8.5rem;
+    padding-bottom: 2.5rem;
   }
 
-  &--crew {
-    background: url("../../assets/crew/background-crew-mobile.jpg") no-repeat
-      fixed center bottom;
-    background-size: cover;
-
-    @include tablet {
-      background-image: url("../../assets/crew/background-crew-tablet.jpg");
-    }
-
-    @include desktop {
-      background-image: url("../../assets/crew/background-crew-desktop.jpg");
-    }
+  @include desktop {
+    padding-top: 11.5rem;
+    padding-bottom: 3rem;
   }
 
   &--technology {
     background: url("../../assets/technology/background-technology-mobile.jpg")
       no-repeat fixed center center;
-    background-size: contain;
+    background-size: cover;
 
     @include tablet {
       background-image: url("../../assets/technology/background-technology-tablet.jpg");

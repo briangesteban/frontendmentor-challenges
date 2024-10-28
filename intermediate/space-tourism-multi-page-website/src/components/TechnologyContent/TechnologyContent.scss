@@ -1,9 +1,22 @@
 @use "../../styles/typography" as *;
 @use "../../styles/colors" as *;
+@use "../../styles/medias" as *;
 
 .tech {
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 90rem;
+    margin-inline: auto;
+  }
+
   & > * {
     padding-inline: 1.5rem;
+
+    @include tablet {
+      padding-inline: 2.5rem;
+    }
   }
 
   &__title {
@@ -14,6 +27,20 @@
     text-transform: uppercase;
     text-align: center;
     color: $clr-neut-lgt;
+    transition: font-size 1s, text-align 1s;
+
+    @include tablet {
+      font-size: 1.25rem;
+      text-align: left;
+    }
+
+    @include desktop {
+      font-size: 1.75rem;
+      letter-spacing: 0.25rem;
+      flex-grow: 1;
+      flex-basis: 100%;
+      padding-inline: 10.3125rem;
+    }
 
     &--number {
       font-weight: 700;
@@ -27,15 +54,52 @@
       height: 16.125rem;
       padding-inline: 0;
       margin-top: 5.5rem;
+      transition: width 500ms, height 500ms;
+
+      @include tablet {
+        height: 22.3125rem;
+      }
+
+      @include desktop {
+        flex-basis: 38rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        order: 3;
+        min-height: 45.875rem;
+        height: 37.5rem;
+        margin-top: 0;
+      }
     }
 
     &:last-of-type {
       margin-top: 2rem;
+
+      @include desktop {
+        flex-grow: 1;
+        order: 2;
+        display: grid;
+        grid-template-columns: 0fr 1fr;
+        grid-template-rows: auto auto auto;
+        padding-inline: 0;
+        padding-left: 10.3125rem;
+        padding-right: 2rem;
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__image-source {
+    width: 100%;
+    height: inherit;
+
+    @include desktop {
+      margin-left: auto;
     }
   }
 
   &__image {
-    width: 100%;
+    width: inherit;
     height: inherit;
     object-fit: cover;
     object-position: bottom;
@@ -45,11 +109,29 @@
     width: 100%;
     margin-bottom: 2.5rem;
 
+    @include desktop {
+      grid-row: 1 / span 3;
+      display: flex;
+      margin-bottom: 0;
+      margin-right: 4rem;
+    }
+
     &-wrapper {
       display: flex;
       justify-content: space-between;
       max-width: 9.5rem;
       margin-inline: auto;
+      transition: max-width 500ms;
+
+      @include tablet {
+        max-width: 12.5rem;
+      }
+
+      @include desktop {
+        flex-direction: column;
+        max-width: none;
+        margin-inline: 0;
+      }
     }
 
     &-link {
@@ -66,7 +148,20 @@
       border-radius: 100%;
       width: 2.5rem;
       height: 2.5rem;
-      transition: border-color 500ms, background-color 1s, color 1s;
+      transition: border-color 500ms, background-color 1s, color 1s,
+        height 500ms, width 500ms, font-size 1s;
+
+      @include tablet {
+        font-size: 1.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+      @include desktop {
+        font-size: 2rem;
+        width: 5rem;
+        height: 5rem;
+      }
 
       &--active {
         border: none;
@@ -93,6 +188,16 @@
     color: $clr-neut-lgt;
     opacity: 0.542;
     margin-bottom: 1rem;
+    transition: font-size 1s;
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
+
+    @include desktop {
+      font-size: 2rem;
+      text-align: left;
+    }
   }
 
   &__name {
@@ -103,10 +208,34 @@
     text-transform: uppercase;
     color: $clr-neut-lgt;
     margin-bottom: 1rem;
+    transition: font-size 1s;
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+
+    @include desktop {
+      font-size: 3.5rem;
+      text-align: left;
+    }
   }
 
   &__description {
     line-height: 1.8;
     text-align: center;
+    transition: font-size 1s;
+
+    @include tablet {
+      font-size: 1rem;
+      max-width: 32rem;
+      margin-inline: auto;
+    }
+
+    @include desktop {
+      font-size: 1.125rem;
+      text-align: left;
+      margin-inline: 0;
+      max-width: 30.6875rem;
+    }
   }
 }
