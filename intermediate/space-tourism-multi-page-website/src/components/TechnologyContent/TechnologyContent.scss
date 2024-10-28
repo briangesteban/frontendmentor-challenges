@@ -2,6 +2,10 @@
 @use "../../styles/colors" as *;
 
 .tech {
+  & > * {
+    padding-inline: 1.5rem;
+  }
+
   &__title {
     font-family: $fs-barlow-condensed;
     font-size: 1rem;
@@ -20,8 +24,8 @@
 
   &__wrapper {
     &:first-of-type {
-      position: relative;
       height: 16.125rem;
+      padding-inline: 0;
       margin-top: 5.5rem;
     }
 
@@ -31,11 +35,10 @@
   }
 
   &__image {
-    position: absolute;
-    inset: 0 auto auto -1.5rem;
-    width: 100vw;
+    width: 100%;
     height: inherit;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: bottom;
   }
 
   &__nav {

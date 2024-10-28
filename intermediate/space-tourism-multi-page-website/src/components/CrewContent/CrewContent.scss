@@ -2,6 +2,8 @@
 @use "../../styles/typography" as *;
 
 .crew {
+  padding-inline: 1.5rem;
+
   &__title {
     font-family: $fs-barlow-condensed;
     font-size: 1rem;
