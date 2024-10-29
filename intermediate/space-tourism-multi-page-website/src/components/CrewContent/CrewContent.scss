@@ -1,8 +1,22 @@
 @use "../../styles/colors" as *;
 @use "../../styles/typography" as *;
+@use "../../styles/medias" as *;
 
 .crew {
   padding-inline: 1.5rem;
+
+  @include tablet {
+    padding-inline: 2.5rem;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 90rem;
+    padding-inline: 0;
+    margin-inline: auto;
+  }
 
   &__title {
     font-family: $fs-barlow-condensed;
@@ -12,6 +26,19 @@
     text-transform: uppercase;
     text-align: center;
     color: $clr-neut-lgt;
+    transition: font-size 1s;
+
+    @include tablet {
+      font-size: 1.25rem;
+      text-align: left;
+    }
+
+    @include desktop {
+      flex-basis: 100%;
+      font-size: 1.75rem;
+      letter-spacing: 0.25rem;
+      padding-inline: 10.3125rem;
+    }
 
     &--number {
       font-weight: 700;
@@ -26,9 +53,34 @@
     justify-content: center;
     align-items: center;
 
+    @include desktop {
+      align-items: flex-start;
+      min-height: 45.875rem;
+    }
+
+    &:first-of-type {
+      @include desktop {
+        flex-grow: 1;
+        padding-left: 10.3125rem;
+        margin-right: 2rem;
+        margin-top: 1.5rem;
+      }
+    }
+
     &:last-of-type {
       overflow: hidden;
       margin-top: 2rem;
+
+      @include tablet {
+        flex-grow: 1;
+      }
+
+      @include desktop {
+        flex-grow: 0;
+        flex-basis: 33.6875rem;
+        margin-top: 1.5rem;
+        margin-right: 10.3125rem;
+      }
     }
   }
 
@@ -41,12 +93,34 @@
     color: $clr-neut-lgt;
     margin-top: 4rem;
     margin-bottom: 1.5rem;
+    transition: font-size 1s;
+
+    @include tablet {
+      font-size: 2.5rem;
+    }
+
+    @include desktop {
+      font-size: 3.5rem;
+      text-align: left;
+      max-width: 33.6875rem;
+      margin-top: auto;
+    }
 
     &--role {
       display: block;
       font-size: 1.125rem;
       opacity: 0.5;
       margin-bottom: 0.5rem;
+      transition: font-size 1s;
+
+      @include tablet {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      @include desktop {
+        font-size: 2rem;
+      }
     }
   }
 
@@ -55,6 +129,20 @@
     text-align: center;
     min-height: 10.25rem;
     margin-bottom: 1.5rem;
+    transition: font-size 1s;
+
+    @include tablet {
+      font-size: 1rem;
+      max-width: 32rem;
+      min-height: 7.3125rem;
+    }
+
+    @include desktop {
+      font-size: 1.125rem;
+      text-align: left;
+      max-width: 33.6875rem;
+      margin-bottom: 0;
+    }
   }
 
   &__carousel {
@@ -62,11 +150,21 @@
     justify-content: center;
     width: 100%;
 
+    @include desktop {
+      justify-content: flex-start;
+      margin-top: auto;
+      margin-bottom: 3rem;
+    }
+
     &-nav {
       display: flex;
       justify-content: space-between;
       width: inherit;
       max-width: 5.5rem;
+
+      @include desktop {
+        max-width: 11.25rem;
+      }
     }
 
     &-button {
@@ -76,7 +174,12 @@
       width: 0.625rem;
       height: 0.625rem;
       opacity: 0.174;
-      transition: opacity 1s;
+      transition: opacity 1s, width 500ms, height 500ms;
+
+      @include desktop {
+        width: 0.9375rem;
+        height: 0.9375rem;
+      }
 
       &:is(:hover, :active, :focus-visible) {
         opacity: 0.5;
@@ -93,6 +196,8 @@
   }
 
   &__image {
+    width: 100%;
+
     height: 21.25rem;
     mask-image: linear-gradient(
       $clr-primary-drk 85%,
@@ -101,5 +206,15 @@
     mask-mode: alpha;
     mask-repeat: no-repeat;
     mask-size: cover;
+    transition: width 500ms, height 500ms;
+
+    @include tablet {
+      height: 35rem;
+    }
+
+    @include desktop {
+      width: 33.6875rem;
+      height: 45.875rem;
+    }
   }
 }

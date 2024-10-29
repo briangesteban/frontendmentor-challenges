@@ -8,7 +8,13 @@
   padding-bottom: 1.5rem;
 
   @include tablet {
+    padding-top: 8.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  @include desktop {
+    padding-top: 11.5rem;
+    padding-bottom: 3rem;
   }
 
   &--crew {
