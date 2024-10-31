@@ -27,7 +27,7 @@
     text-transform: uppercase;
     text-align: center;
     color: $clr-neut-lgt;
-    transition: font-size 1s;
+    transition: font-size 1s, padding 500ms;
 
     @include tablet {
       font-size: 1.25rem;
