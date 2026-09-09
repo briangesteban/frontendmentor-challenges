@@ -1,0 +1,46 @@
+//////// Global Resets ////////
+
+// Partial imports
+@use "./fonts" as *;
+@use "./colors" as *;
+@use "./fn-mixins" as *;
+
+// Change default root font size (easier computation)
+:root {
+  font-size: 10px;
+}
+
+// Reset size calculation
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Removes default margin and padding
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// Change default cursor for links and buttons
+a,
+button {
+  cursor: pointer;
+}
+
+// Change default fonts and colors
+body {
+  font-family: $ff-primary-stack;
+  font-size: $fs-root;
+  font-weight: $fw-regular;
+  color: $clr-neut-white;
+  background-color: $clr-neut-off-black;
+}
+
+// Change display and set minimum height
+#root {
+  @include dp-flex-block(column, nowrap);
+  min-height: 100vh;
+  width: 100%;
+}
