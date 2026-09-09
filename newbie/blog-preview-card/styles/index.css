@@ -1,0 +1,219 @@
+@font-face {
+  font-family: "Figtree Extra Bold";
+  src: url("../assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype"), url("../assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Figtree Medium";
+  src: url("../assets/fonts/static/Figtree-SemiBold.ttf") format("truetype");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+a {
+  font: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Figtree Medium", sans-serif;
+  font-size: 0.875rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: hsl(47, 88%, 63%);
+  color: hsl(0, 0%, 7%);
+  min-height: 100vh;
+}
+@media only screen and (min-width: 1440px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.content__header--sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.blog-card {
+  background-color: hsl(0, 0%, 100%);
+  border: solid 1px hsl(0, 0%, 7%);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  margin-inline: 1.5rem;
+  box-shadow: 0.5rem 0.5rem hsl(0, 0%, 7%);
+  max-width: 24rem;
+}
+@media only screen and (min-width: 1440px) {
+  .blog-card {
+    margin-inline: auto;
+  }
+}
+.blog-card__thumbnail {
+  border-radius: 0.625rem;
+  width: 100%;
+}
+.blog-card__content {
+  margin: 1.25rem 0;
+}
+.blog-card__label {
+  font-family: "Figtree Extra Bold", sans-serif;
+  font-size: 0.75rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  display: inline-block;
+  background-color: hsl(47, 88%, 63%);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+@media only screen and (min-width: 1440px) {
+  .blog-card__label {
+    font-size: 0.875rem;
+  }
+}
+.blog-card__pub-date {
+  font-family: "Figtree Medium", sans-serif;
+  font-size: 0.75rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  margin-bottom: 0.75rem;
+}
+@media only screen and (min-width: 1440px) {
+  .blog-card__pub-date {
+    font-size: 0.875rem;
+  }
+}
+.blog-card__link {
+  color: hsl(0, 0%, 7%);
+  text-decoration: none;
+  transition: color 500ms;
+}
+.blog-card__link:is(:hover, :active, :focus-visible) {
+  color: hsl(47, 88%, 63%);
+}
+.blog-card__title {
+  font-family: "Figtree Extra Bold", sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  margin-bottom: 0.75rem;
+}
+@media only screen and (min-width: 1440px) {
+  .blog-card__title {
+    font-size: 1.5rem;
+  }
+}
+.blog-card__details {
+  font-family: "Figtree Medium", sans-serif;
+  font-size: 0.875rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: hsl(0, 0%, 42%);
+}
+@media only screen and (min-width: 1440px) {
+  .blog-card__details {
+    font-size: 1rem;
+  }
+}
+.blog-card__author {
+  display: flex;
+  align-items: center;
+}
+
+.author__avatar {
+  width: 2rem;
+  height: 2rem;
+  aspect-ratio: 1/1;
+}
+.author__name {
+  font-family: "Figtree Extra Bold", sans-serif;
+  font-size: 0.75rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  font-size: 0.875rem;
+  margin-left: 0.75rem;
+}
+@media only screen and (min-width: 1440px) {
+  .author__name {
+    font-size: 0.875rem;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(0, 0%, 7%);
+  padding: 0.5rem;
+}
+.footer__attribution {
+  font-family: "Figtree Medium", sans-serif;
+  font-size: 0.75rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  width: 12rem;
+  line-height: 1.5rem;
+}
+@media only screen and (min-width: 1440px) {
+  .footer__attribution {
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .footer__attribution {
+    width: 15rem;
+  }
+}
+.footer__attribution-link {
+  font-family: "Figtree Extra Bold", sans-serif;
+  font-size: 0.75rem;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: hsl(47, 88%, 63%);
+  text-decoration: none;
+  position: relative;
+}
+@media only screen and (min-width: 1440px) {
+  .footer__attribution-link {
+    font-size: 0.875rem;
+  }
+}
+.footer__attribution-link::after {
+  content: "";
+  display: block;
+  background-color: hsl(47, 88%, 63%);
+  width: 0;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 500ms;
+}
+.footer__attribution-link:is(:hover, :active, :focus-visible)::after {
+  width: 100%;
+}

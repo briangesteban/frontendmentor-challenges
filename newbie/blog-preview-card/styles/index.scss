@@ -1,0 +1,144 @@
+@use "./partials/resets";
+@use "./partials/colors" as *;
+@use "./partials/typography" as *;
+@use "./partials/medias" as *;
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  &__header {
+    &--sr-only {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+  }
+}
+
+.blog-card {
+  background-color: $clr-neut-lgt;
+  border: solid 1px $clr-neut-drk;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  margin-inline: 1.5rem;
+  box-shadow: 0.5rem 0.5rem $clr-neut-drk;
+  max-width: 24rem;
+
+  @include desktop {
+    margin-inline: auto;
+  }
+
+  &__thumbnail {
+    border-radius: 0.625rem;
+    width: 100%;
+  }
+
+  &__content {
+    margin: 1.25rem 0;
+  }
+
+  &__label {
+    @include type-footer-bold;
+    display: inline-block;
+    background-color: $clr-primary;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &__pub-date {
+    @include type-footer;
+    margin-bottom: 0.75rem;
+  }
+
+  &__link {
+    color: $clr-neut-drk;
+    text-decoration: none;
+    transition: color 500ms;
+
+    &:is(:hover, :active, :focus-visible) {
+      color: $clr-primary;
+    }
+  }
+
+  &__title {
+    @include type-header;
+    margin-bottom: 0.75rem;
+  }
+
+  &__details {
+    @include type-body-copy;
+    color: $clr-neut-mid;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.author {
+  &__avatar {
+    width: 2rem;
+    height: 2rem;
+    aspect-ratio: 1/1;
+  }
+
+  &__name {
+    @include type-footer-bold;
+    font-size: 0.875rem;
+    margin-left: 0.75rem;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: $clr-neut-drk;
+  padding: 0.5rem;
+
+  &__attribution {
+    @include type-footer;
+    color: $clr-neut-lgt;
+    text-align: center;
+    width: 12rem;
+    line-height: 1.5rem;
+
+    @include desktop {
+      width: 15rem;
+    }
+
+    &-link {
+      @include type-footer-bold;
+      color: $clr-primary;
+      text-decoration: none;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        background-color: $clr-primary;
+        width: 0;
+        height: 1px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transition: 500ms;
+      }
+
+      &:is(:hover, :active, :focus-visible) {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "./colors" as *;
+@use "./typography" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+a {
+  font: inherit;
+  cursor: pointer;
+}
+
+body {
+  @include type-body-copy;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: $clr-primary;
+  color: $clr-neut-drk;
+  min-height: 100vh;
+}
