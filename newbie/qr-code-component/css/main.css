@@ -1,0 +1,123 @@
+:root {
+	/* Color Theme */
+	--clr-primary: hsl(212, 45%, 89%);
+	--clr-neutral: hsl(0, 0%, 100%);
+	--clr-txt-primary: hsl(220, 15%, 55%);
+	--clr-txt-accent: hsl(218, 44%, 33%);
+	--clr-link: hsl(228, 45%, 44%);
+	--clr-link-h: hsl(228, 45%, 22%);
+	--clr-shadow: hsla(0, 0%, 0%, 0.1);
+
+	/* Font Family */
+	--ff-primary: 'Outfit', sans-serif;
+
+	/* Font Weights */
+	--fw-regular: 400;
+	--fw-bold: 700;
+}
+
+/* Default Overrides */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	font: 0.937rem var(--ff-primary);
+	font-weight: var(--fw-regular);
+	line-height: 1.2;
+	color: var(--clr-txt-primary);
+	background-color: var(--clr-primary);
+	min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+	font-weight: var(--fw-bold);
+	color: var(--clr-txt-accent);
+}
+
+/* Accessibility */
+.sr-only {
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
+}
+
+/* Styles */
+.flex {
+	display: flex;
+}
+
+.flx-col {
+	flex-direction: column;
+}
+
+.flx-center-xy {
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	background-color: var(--clr-neutral);
+	border-radius: 1rem;
+	box-shadow: 0 1rem 2rem var(--clr-shadow);
+	width: 85vw;
+	padding: 1rem;
+}
+
+.qr-code {
+	border-radius: 0.6rem;
+	width: 100%;
+}
+
+.details-container {
+	row-gap: 1rem;
+	text-align: center;
+	padding: 1.5rem 0.5rem;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-size: 0.75rem;
+	text-align: center;
+	width: 100%;
+	margin: 0.5rem 0;
+}
+
+p.attribution {
+	color: var(--clr-txt-accent);
+}
+
+.attribution a:is(:link, :visited) {
+	text-decoration: none;
+	color: var(--clr-link);
+}
+
+.attribution a:is(:hover, :active, :focus) {
+	color: var(--clr-link-h);
+}
+
+/* Larger Displays */
+@media only screen and (min-width: 491px) {
+	main {
+		max-width: 20rem;
+	}
+}
+
+/* Footer for Galaxy Fold */
+@media only screen and (max-width: 280px) {
+	footer {
+		font-size: 0.6rem;
+	}
+}
