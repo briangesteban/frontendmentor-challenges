@@ -1,0 +1,33 @@
+@use "../../styles/colors" as *;
+@use "../../styles/medias" as *;
+
+.content {
+  flex-grow: 1;
+  background-color: $clr-primary-drk;
+  padding-top: 7rem;
+  padding-bottom: 1.5rem;
+
+  @include tablet {
+    padding-top: 8.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  @include desktop {
+    padding-top: 11.5rem;
+    padding-bottom: 3rem;
+  }
+
+  &--destination {
+    background: url("../../assets/destination/background-destination-mobile.jpg")
+      no-repeat fixed center bottom;
+    background-size: cover;
+
+    @include tablet {
+      background-image: url("../../assets/destination/background-destination-tablet.jpg");
+    }
+
+    @include desktop {
+      background-image: url("../../assets/destination/background-destination-desktop.jpg");
+    }
+  }
+}

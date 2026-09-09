@@ -1,0 +1,7 @@
+@use "./styles/resets";
+
+.pointer-evt {
+  &--false {
+    pointer-events: none;
+  }
+}

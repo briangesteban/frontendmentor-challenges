@@ -1,0 +1,279 @@
+@use "../../styles/colors" as *;
+@use "../../styles/typography" as *;
+@use "../../styles/medias" as *;
+
+.destination {
+  padding-inline: 1.5rem;
+  transition: padding 500ms;
+
+  @include tablet {
+    padding-inline: 2.5rem;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 90rem;
+    padding-inline: 0;
+    margin-inline: auto;
+  }
+
+  &__page-title {
+    font-family: $fs-barlow-condensed;
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: $clr-neut-lgt;
+    transition: font-size 1s;
+
+    @include tablet {
+      font-size: 1.25rem;
+      text-align: left;
+    }
+
+    @include desktop {
+      flex-basis: 100%;
+      font-size: 1.75rem;
+      letter-spacing: 0.25rem;
+      padding-inline: 10.3125rem;
+    }
+
+    &--number {
+      font-weight: 700;
+      opacity: 0.25;
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    transition: padding 500ms;
+
+    @include desktop {
+      height: 45.875rem;
+      margin-top: 1.5rem;
+    }
+
+    &:first-of-type {
+      flex-basis: 33.6875rem;
+      justify-content: center;
+
+      @include desktop {
+        padding-left: 10.3125rem;
+        margin-right: 2rem;
+      }
+    }
+
+    &:last-of-type {
+      flex-grow: 1;
+      flex-direction: column;
+
+      @include desktop {
+        align-items: flex-start;
+        justify-content: center;
+        padding-right: 10.3125rem;
+        padding-left: 2.9375rem;
+      }
+    }
+  }
+
+  &__image {
+    width: 9.375rem;
+    height: 9.375rem;
+    aspect-ratio: 1/1;
+    margin-top: 3.15625rem;
+    margin-bottom: 3.65625rem;
+    transition: width 500ms, height 500ms, margin 500ms;
+
+    @include tablet {
+      width: 18.75rem;
+      height: 18.75rem;
+      margin-top: 4.125rem;
+      margin-bottom: 4.625rem;
+    }
+
+    @include desktop {
+      width: 30rem;
+      height: 30rem;
+      margin: 7.9375rem 1.84375rem;
+    }
+  }
+
+  &__nav {
+    margin-bottom: 2.3125rem;
+    transition: margin 500ms;
+
+    @include tablet {
+      margin-bottom: 3.3125rem;
+    }
+
+    &-link {
+      font-family: $fs-barlow-condensed;
+      font-size: 0.875rem;
+      color: $clr-primary-lgt;
+      text-decoration: none;
+      letter-spacing: 0.15rem;
+      text-transform: uppercase;
+      position: relative;
+      margin-right: 2rem;
+      transition: color 1s, font-size 500ms;
+
+      @include tablet {
+        font-size: 1rem;
+        letter-spacing: 0.125rem;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        background-color: $clr-neut-lgt;
+        width: 100%;
+        height: 0.1875rem;
+        position: absolute;
+        inset: auto auto -0.9375rem 0;
+        opacity: 0;
+        transition: opacity 1s, inset 500ms;
+
+        @include tablet {
+          bottom: -0.8125rem;
+        }
+      }
+
+      &:is(:hover, :active, :focus-visible) {
+        color: $clr-neut-lgt;
+
+        &::after {
+          opacity: 0.5;
+        }
+      }
+
+      &--active {
+        color: $clr-neut-lgt;
+
+        &::after {
+          content: "";
+          display: block;
+          background-color: $clr-neut-lgt;
+          width: 100%;
+          height: 0.1875rem;
+          position: absolute;
+          inset: auto auto -0.9375rem 0;
+          opacity: 1;
+          transition: opacity 1s, inset 500ms;
+
+          @include tablet {
+            bottom: -0.8125rem;
+          }
+        }
+
+        &:is(:hover, :active, :focus-visible) {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-family: $fs-bellefair;
+    font-size: 3.5rem;
+    font-weight: normal;
+    color: $clr-neut-lgt;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    transition: font-size 500ms;
+
+    @include tablet {
+      font-size: 5rem;
+    }
+
+    @include desktop {
+      font-size: 6rem;
+      text-align: left;
+    }
+  }
+
+  &__details {
+    line-height: 1.8;
+    text-align: center;
+    border-bottom: solid 0.0625rem rgba($clr-neut-lgt, 0.25);
+    padding-bottom: 1.5rem;
+    transition: font-size 500ms;
+
+    @include tablet {
+      font-size: 1rem;
+      max-width: 32.125rem;
+      transition: max-width 500ms, padding 500ms;
+    }
+
+    @include desktop {
+      font-size: 1.125rem;
+      text-align: left;
+      max-width: 27.8125rem;
+      padding-bottom: 2.5rem;
+    }
+  }
+}
+
+.destination-stat {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  transition: margin 500ms;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  @include desktop {
+    margin-top: 2.5rem;
+  }
+
+  &__detail {
+    font-family: $fs-barlow;
+    font-size: 0.875rem;
+    font-weight: normal;
+    letter-spacing: 0.125rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: margin 500ms;
+
+    @include tablet {
+      min-width: 15.3125rem;
+      margin-left: 1.5rem;
+      transition: min-width 500ms;
+    }
+
+    @include desktop {
+      text-align: left;
+      min-width: 13.15625rem;
+    }
+
+    &:first-child {
+      margin-bottom: 1.5rem;
+
+      @include tablet {
+        margin: 0;
+      }
+    }
+
+    &-value {
+      display: block;
+      font-family: $fs-bellefair;
+      font-size: 1.75rem;
+      color: $clr-neut-lgt;
+      margin-top: 0.75rem;
+    }
+  }
+}
