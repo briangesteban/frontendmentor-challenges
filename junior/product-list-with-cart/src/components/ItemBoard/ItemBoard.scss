@@ -1,0 +1,51 @@
+@use "../../styles/media-queries" as *;
+@use "../../styles/typography" as *;
+
+.item-board {
+  padding: 1.5rem;
+
+  @include tablet() {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include desktop() {
+    max-width: 1280px;
+    padding: 0;
+    margin: 5rem auto;
+  }
+
+  &--true {
+    overflow: hidden;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 5rem 0;
+  }
+
+  &__menu {
+    @include desktop() {
+      flex-basis: 70%;
+    }
+  }
+
+  &__header {
+    font-weight: $fw-black;
+    font-size: $fs-header;
+    margin-bottom: 2rem;
+  }
+
+  &__menu-list {
+    display: flex;
+    flex-flow: column wrap;
+    flex-basis: 70%;
+
+    @include tablet() {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+
+    @include desktop() {
+      margin-right: 1.5rem;
+    }
+  }
+}

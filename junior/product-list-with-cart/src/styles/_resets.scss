@@ -1,0 +1,50 @@
+@use "./media-queries" as *;
+@use "./colors" as *;
+@use "./typography" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+a,
+input,
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: $fw-black;
+}
+
+body {
+  font-family: $font-stack;
+  font-weight: $fw-regular;
+  font-size: $fs-body-copy;
+  font-optical-sizing: auto;
+  color: $clr-rose-900;
+  background-color: $clr-rose-100;
+}
+
+#root {
+  min-height: 100vh;
+
+  @include desktop() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}

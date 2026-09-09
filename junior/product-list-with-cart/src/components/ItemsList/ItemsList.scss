@@ -1,0 +1,110 @@
+@use "../../styles/media-queries" as *;
+@use "../../styles/colors" as *;
+@use "../../styles/typography" as *;
+
+.card {
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  @include tablet() {
+    flex-grow: 1;
+    flex-basis: 30%;
+  }
+
+  &__img-container {
+    width: inherit;
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  &__btn-atc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2.5rem;
+    padding: 0.8rem 1rem;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: solid 1px $clr-rose-500;
+    background-color: $clr-rose-50;
+    font-weight: $fw-bold;
+    font-size: $fs-body-copy;
+    width: 10rem;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__item-counter {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: $clr-red;
+    border-radius: 2.5rem;
+    padding: 0.8rem;
+    width: 10rem;
+
+    &--visible {
+      display: flex;
+    }
+  }
+
+  &__btn-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $fs-xs;
+    background-color: transparent;
+    color: $clr-rose-50;
+    border: solid 1px $clr-rose-50;
+    border-radius: 25rem;
+    padding: 0.2rem;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &__item-count {
+    font-size: $fs-xs;
+    font-weight: $fw-bold;
+    color: $clr-rose-50;
+  }
+
+  &__item-img {
+    width: 100%;
+    border-radius: 0.5rem;
+
+    @include tablet() {
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+
+    &--border-on {
+      border: solid 2px $clr-red;
+    }
+  }
+
+  &__item-category {
+    font-weight: $fw-bold;
+    font-size: $fs-xs;
+    color: $clr-rose-400;
+  }
+
+  &__item-name {
+    font-size: $fs-body-copy;
+  }
+
+  &__item-price {
+    color: $clr-red;
+  }
+
+  &__icon-atc {
+    margin-right: 0.5rem;
+  }
+}
