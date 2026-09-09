@@ -1,0 +1,8 @@
+@use "./styles/partials/resets" as *;
+@use "./styles/partials/fn-mixins" as *;
+@use "./styles/partials/media-queries" as *;
+@use "./styles/partials/colors" as *;
+
+.body--drk-mode {
+  background-color: $drk-mode-bg;
+}

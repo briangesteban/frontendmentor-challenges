@@ -1,0 +1,21 @@
+////////  Functional Mixins ////////
+
+// Display Flex Block
+@mixin dp-flex-block($dir, $wrap) {
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+}
+
+// Display Inline Flex
+@mixin dp-flex-inline($dir, $wrap) {
+  display: inline-flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+}
+
+// Flex Centering
+@mixin flex-center($m-axis, $x-axis) {
+  justify-content: $m-axis;
+  align-items: $x-axis;
+}

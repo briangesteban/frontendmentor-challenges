@@ -1,0 +1,27 @@
+@use "../../styles/partials/media-queries" as *;
+@use "../../styles/partials/fn-mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+.not-found {
+  text-align: center;
+  padding: 2rem;
+  @include desktop() {
+    max-width: 1280px;
+    margin-inline: auto;
+  }
+  &__title {
+    color: $lght-mode-txt;
+
+    &--drk-mode {
+      color: $drk-mode-txt;
+    }
+  }
+
+  &__content {
+    color: $lght-mode-txt;
+
+    &--drk-mode {
+      color: $drk-mode-txt;
+    }
+  }
+}
